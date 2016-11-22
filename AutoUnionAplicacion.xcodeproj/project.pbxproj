@@ -15,6 +15,9 @@
 		781782F61DDA1B4000A2570E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781782F41DDA1B4000A2570E /* LaunchScreen.storyboard */; };
 		781783011DDA1B4000A2570E /* AutoUnionAplicacionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781783001DDA1B4000A2570E /* AutoUnionAplicacionTests.swift */; };
 		7817830C1DDA1B4100A2570E /* AutoUnionAplicacionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7817830B1DDA1B4100A2570E /* AutoUnionAplicacionUITests.swift */; };
+		7817831A1DDA23EB00A2570E /* FilaModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781783191DDA23EB00A2570E /* FilaModelo.swift */; };
+		7817831C1DDA48B900A2570E /* DetalleAutomovil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */; };
+		78AFD2571DDB6ADE0066B830 /* DetalleUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		781783071DDA1B4100A2570E /* AutoUnionAplicacionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoUnionAplicacionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7817830B1DDA1B4100A2570E /* AutoUnionAplicacionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoUnionAplicacionUITests.swift; sourceTree = "<group>"; };
 		7817830D1DDA1B4100A2570E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781783191DDA23EB00A2570E /* FilaModelo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaModelo.swift; sourceTree = "<group>"; };
+		7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAutomovil.swift; sourceTree = "<group>"; };
+		78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleUsuario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +105,15 @@
 		781782E81DDA1B4000A2570E /* AutoUnionAplicacion */ = {
 			isa = PBXGroup;
 			children = (
-				781782E91DDA1B4000A2570E /* AppDelegate.swift */,
+				78E0DD391DDA95D3002A97F5 /* Ressources */,
+				7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */,
 				781782EB1DDA1B4000A2570E /* FirstViewController.swift */,
 				781782ED1DDA1B4000A2570E /* SecondViewController.swift */,
+				781783191DDA23EB00A2570E /* FilaModelo.swift */,
+				78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */,
 				781782EF1DDA1B4000A2570E /* Main.storyboard */,
 				781782F21DDA1B4000A2570E /* Assets.xcassets */,
+				781782E91DDA1B4000A2570E /* AppDelegate.swift */,
 				781782F41DDA1B4000A2570E /* LaunchScreen.storyboard */,
 				781782F71DDA1B4000A2570E /* Info.plist */,
 			);
@@ -126,6 +136,13 @@
 				7817830D1DDA1B4100A2570E /* Info.plist */,
 			);
 			path = AutoUnionAplicacionUITests;
+			sourceTree = "<group>";
+		};
+		78E0DD391DDA95D3002A97F5 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				781782EE1DDA1B4000A2570E /* SecondViewController.swift in Sources */,
+				7817831C1DDA48B900A2570E /* DetalleAutomovil.swift in Sources */,
 				781782EA1DDA1B4000A2570E /* AppDelegate.swift in Sources */,
 				781782EC1DDA1B4000A2570E /* FirstViewController.swift in Sources */,
+				78AFD2571DDB6ADE0066B830 /* DetalleUsuario.swift in Sources */,
+				7817831A1DDA23EB00A2570E /* FilaModelo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97Y568JHM3;
 				INFOPLIST_FILE = AutoUnionAplicacion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mosso.AutoUnionAplicacion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97Y568JHM3;
 				INFOPLIST_FILE = AutoUnionAplicacion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mosso.AutoUnionAplicacion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +538,7 @@
 				781783121DDA1B4100A2570E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		781783131DDA1B4100A2570E /* Build configuration list for PBXNativeTarget "AutoUnionAplicacionTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +547,7 @@
 				781783151DDA1B4100A2570E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		781783161DDA1B4100A2570E /* Build configuration list for PBXNativeTarget "AutoUnionAplicacionUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +556,7 @@
 				781783181DDA1B4100A2570E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

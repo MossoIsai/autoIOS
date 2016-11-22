@@ -15,7 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //Color del texto del background
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
+        // Title's text color
+        //Color del tintoColor
+       UINavigationBar.appearance().tintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        //background de la barra de navegacion
+        
+       /* UINavigationBar.appearance().backgroundColor =  UIColor(red:44/255, green: 25/255, blue: 53/255, alpha: 10)*/
+        
+          UINavigationBar.appearance().barTintColor = UIColor(red: 44/255, green: 25/255, blue: 53/255, alpha: 1.0)
+      
+        
+        /**Textos blanco en los encabezados*/
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        
+    
         return true
     }
 

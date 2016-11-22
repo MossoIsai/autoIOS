@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "781782E51DDA1B4000A2570E"
+               BuildableName = "AutoUnionAplicacion.app"
+               BlueprintName = "AutoUnionAplicacion"
+               ReferencedContainer = "container:AutoUnionAplicacion.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "781782FB1DDA1B4000A2570E"
+               BuildableName = "AutoUnionAplicacionTests.xctest"
+               BlueprintName = "AutoUnionAplicacionTests"
+               ReferencedContainer = "container:AutoUnionAplicacion.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "781783061DDA1B4100A2570E"
+               BuildableName = "AutoUnionAplicacionUITests.xctest"
+               BlueprintName = "AutoUnionAplicacionUITests"
+               ReferencedContainer = "container:AutoUnionAplicacion.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "781782E51DDA1B4000A2570E"
+            BuildableName = "AutoUnionAplicacion.app"
+            BlueprintName = "AutoUnionAplicacion"
+            ReferencedContainer = "container:AutoUnionAplicacion.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "781782E51DDA1B4000A2570E"
+            BuildableName = "AutoUnionAplicacion.app"
+            BlueprintName = "AutoUnionAplicacion"
+            ReferencedContainer = "container:AutoUnionAplicacion.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "781782E51DDA1B4000A2570E"
+            BuildableName = "AutoUnionAplicacion.app"
+            BlueprintName = "AutoUnionAplicacion"
+            ReferencedContainer = "container:AutoUnionAplicacion.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
