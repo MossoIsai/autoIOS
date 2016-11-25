@@ -28,7 +28,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         fila.precio.text = "$ 1, 000, 000 M.N"
         fila.datosAuto.text = "Audi R8 Multitronic 2016"
         
-        let automovil: UIImage =  UIImage(named: "img3")!
+        let automovil: UIImage =  UIImage(named: "q1_2")!
         let corazon: UIImage =   UIImage(named: "corazon")!
         let empresa: UIImage =  UIImage(named: "audi_logo")!
         //let mas: UIImage =  UIImage(named: "")!
@@ -37,7 +37,11 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         fila.imgCorazon.image = corazon
         // Iconos redondeado de la empresa
         fila.logoEmpresa.clipsToBounds = true;
-        fila.logoEmpresa.layer.cornerRadius = 9
+        fila.logoEmpresa.layer.cornerRadius = 15
+        fila.logoEmpresa.layer.borderColor = UIColor.black.cgColor
+        fila.logoEmpresa.layer.borderWidth = 0.3
+        fila.logoEmpresa.layer.shadowOffset = CGSize.zero
+
         //desactivar el select de uitableView
         fila.selectionStyle = UITableViewCellSelectionStyle.none
         //Estilo boton

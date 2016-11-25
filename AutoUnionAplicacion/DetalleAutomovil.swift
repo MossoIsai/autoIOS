@@ -13,15 +13,66 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var pageControll: UIPageControl!
-    @IBOutlet weak var vistaInfo: UIView!
+    @IBOutlet weak var imgLogo: UIImageView!
+    @IBOutlet weak var labAgencia: UILabel!
+    @IBOutlet weak var labEspecificacion: UILabel!
+    @IBOutlet weak var precio: UILabel!
+    @IBOutlet weak var btnSeguir: UIButton!
     
+    //Boton Seguir
+    @IBAction func btnSeguir(_ sender: Any) {
+        
+        let buttonSeguir:UIButton = (sender as! UIButton);
+        buttonSeguir.backgroundColor = UIColor(red: 50/255, green: 240/255, blue: 125/255, alpha: 1.0)
+        
+        buttonSeguir.setTitle("SIGUIENDO", for: .normal)
+        buttonSeguir.setTitleColor(UIColor.white, for: .normal)
+        buttonSeguir.layer.cornerRadius = 4
+        buttonSeguir.layer.shadowRadius = 4
+        buttonSeguir.layer.borderColor = UIColor.clear.cgColor
+        
+        
+        
+    }
+    //Boton Compartir
+    @IBAction func btnCompartir(_ sender: Any) {
+        
+        let controladorAlerta =  UIAlertController(title: "", message: "Puede compartir la publicación a traves de las redes sociales de la siguiente lista", preferredStyle: .actionSheet)
+        
+        let compartirFacebook =  UIAlertAction(title: "Compartir en Facebook", style: UIAlertActionStyle.default, handler: nil)
+        
+        let compartirTwitter  =  UIAlertAction(title: "Compartir en Twitter", style: UIAlertActionStyle.default, handler: nil)
+        
+        let copiarURL = UIAlertAction(title: "Copiar URL", style: UIAlertActionStyle.default, handler: nil)
+        
+        
+        let cancelar =  UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel, handler:nil)
+        
+        controladorAlerta.addAction(compartirFacebook)
+        controladorAlerta.addAction(compartirTwitter)
+        controladorAlerta.addAction(copiarURL)
+        controladorAlerta.addAction(cancelar)
+        
+        self.present(controladorAlerta, animated: true, completion: nil)
+        
+    }
     override func viewDidLoad() {
         
+        self.btnSeguir.layer.cornerRadius = 5
+        self.btnSeguir.layer.borderColor = UIColor.black.cgColor
+        self.btnSeguir.layer.borderWidth = 1
+        self.btnSeguir.backgroundColor = .clear
+        
+        self.imgLogo.layer.cornerRadius = 15
+        self.imgLogo.layer.borderWidth = 0.2
+        self.imgLogo.layer.borderColor =  UIColor.black.cgColor
+        self.imgLogo.clipsToBounds = true
+        
         /*describe la ubicación y el tamaño de la vista en el
-        sistema de coordenadas de su superview.*/
+         sistema de coordenadas de su superview.*/
         self.scrollView.frame = CGRect(x:0, y:0, width:self.view.frame.width, height:self.view.frame.height)
         /*El tipo básico para valores
-        /escalares de punto flotante en Core Graphics */
+         /escalares de punto flotante en Core Graphics */
         let scrollViewWidth: CGFloat = self.scrollView.frame.width
         let scrollViewHeight: CGFloat = 300
         //Definimos el tamaño de las imagenes y que imagenes tendra dentro
@@ -55,12 +106,12 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         //View elevation
         
         /*self.scrollView.layer.shadowColor = UIColor.black.cgColor
-        self.scrollView.layer.shadowOpacity =  0.5
-        self.scrollView.layer.shadowOffset =  CGSize.zero
-        vistaInfo.layer.shadowColor = UIColor.black.cgColor
-        vistaInfo.layer.shadowOpacity =  0.6
-        vistaInfo.layer.shadowOffset =  CGSize.zero
-        vistaInfo.layer.shouldRasterize = true*/
+         self.scrollView.layer.shadowOpacity =  0.5
+         self.scrollView.layer.shadowOffset =  CGSize.zero
+         vistaInfo.layer.shadowColor = UIColor.black.cgColor
+         vistaInfo.layer.shadowOpacity =  0.6
+         vistaInfo.layer.shadowOffset =  CGSize.zero
+         vistaInfo.layer.shouldRasterize = true*/
         
     } //fin del ViewDidLoad
     
@@ -68,7 +119,7 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         let pageWidth: CGFloat = scrollView.frame.width
         let currentPage: CGFloat =  floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth)+1
         self.pageControll.currentPage = Int(currentPage)
-
+        
         if Int(currentPage) == 0{
             
         }
@@ -95,6 +146,4 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
             })
         }
     }
-    
-    
 }

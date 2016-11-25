@@ -8,9 +8,10 @@
 
 import UIKit
 
-class DetalleUsuario: UITableViewController,UITextFieldDelegate {
+class DetalleUsuario: UITableViewController,UITextFieldDelegate{
     //PickerDate varible
     var datePicker: UIDatePicker!
+
     //Datos del formulario
     @IBOutlet weak var correo: UITextField!
     @IBOutlet weak var nombre: UITextField!
@@ -24,8 +25,12 @@ class DetalleUsuario: UITableViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         //self.correo.keyboardType = UIKeyboardType.emailAddress
         //Metodo que carga al inicio
-        btnGuardar.layer.cornerRadius = 4
-        btnGuardar.layer.shadowRadius = 4
+        btnGuardar.layer.cornerRadius = 5
+        btnGuardar.layer.shadowRadius = 5
+        btnGuardar.layer.borderColor = UIColor.black.cgColor
+        btnGuardar.layer.borderWidth = 1
+        btnGuardar.backgroundColor = .clear
+        
         //relacionado los input cons su delegate
         correo.delegate = self
         nombre.delegate = self
@@ -51,7 +56,6 @@ class DetalleUsuario: UITableViewController,UITextFieldDelegate {
         //agregando el toolbar como un accesorio dentro de los campos numericos
         self.telefono.inputAccessoryView = toolbar
         self.whatsapp.inputAccessoryView = toolbar
-        
     }
     //Evento "intro"  del teclado
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -73,14 +77,13 @@ class DetalleUsuario: UITableViewController,UITextFieldDelegate {
     }
     //MARK:- Function of datePicker
     func pickUpDate(_ textField : UITextField){
-        
         // DatePicker
         self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
         self.datePicker.backgroundColor = UIColor.clear
         self.datePicker.datePickerMode = UIDatePickerMode.date
         textField.inputView = self.datePicker
         print("Presionando")
-        // ToolBar
+        // ToolBar creada para el picker de fecha
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
@@ -116,7 +119,6 @@ class DetalleUsuario: UITableViewController,UITextFieldDelegate {
         if telefonoCantidad! > 15 || whatsappCantidad! > 15 {
             
             alertarMensaje(mensaje: "Ha excedido el número de caracteres permitidos", titulo: "Alerta")
-        
         }
     }
     //metodo para mostrar un mensaje de uiaLERTvIEW
@@ -127,6 +129,5 @@ class DetalleUsuario: UITableViewController,UITextFieldDelegate {
         
         self.present(alerta, animated: true, completion: nil)
     }
-    
     
 }
