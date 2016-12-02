@@ -16,15 +16,15 @@ class Agencias: UIViewController,UITableViewDelegate,UITableViewDataSource{
         
         let fila: FilaAgencia = tableView.dequeueReusableCell(withIdentifier: "filaId") as! FilaAgencia
         
-        fila.img_logo.image = UIImage(named: "")
+        let empresa: UIImage =  UIImage(named: "img3")!
+        fila.img_logo.image = empresa
         fila.Nombreagencia.text = "Audi Cuernavaca"
-        
-        
         return fila
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
+    
 
     
     
