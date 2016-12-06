@@ -37,13 +37,20 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
     //Boton Compartir
     @IBAction func btnCompartir(_ sender: Any) {
         
-        let controladorAlerta =  UIAlertController(title: "", message: "Puede compartir la publicación a traves de las redes sociales de la siguiente lista", preferredStyle: .actionSheet)
+        let controladorAlerta =  UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
         
         let compartirFacebook =  UIAlertAction(title: "Compartir en Facebook", style: UIAlertActionStyle.default, handler: nil)
+        compartirFacebook.setValue(UIImage(named: "facebook"), forKey: "image")
+        
         
         let compartirTwitter  =  UIAlertAction(title: "Compartir en Twitter", style: UIAlertActionStyle.default, handler: nil)
+        compartirTwitter.setValue(UIImage(named: "twitter"), forKey: "image")
+        
         
         let copiarURL = UIAlertAction(title: "Copiar URL", style: UIAlertActionStyle.default, handler: nil)
+        copiarURL.setValue(UIImage(named: "link"), forKey: "image")
+        
         
         
         let cancelar =  UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel, handler:nil)
@@ -52,6 +59,7 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         controladorAlerta.addAction(compartirTwitter)
         controladorAlerta.addAction(copiarURL)
         controladorAlerta.addAction(cancelar)
+        controladorAlerta.view.tintColor = UIColor.black
         
         self.present(controladorAlerta, animated: true, completion: nil)
         
