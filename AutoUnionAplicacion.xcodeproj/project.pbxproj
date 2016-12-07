@@ -21,6 +21,7 @@
 		789E7E101DF63273003B5E23 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E7E0C1DF63273003B5E23 /* FBSDKLoginKit.framework */; };
 		789E7E111DF63273003B5E23 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E7E0D1DF63273003B5E23 /* FBSDKMessengerShareKit.framework */; };
 		789E7E121DF63273003B5E23 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E7E0E1DF63273003B5E23 /* FBSDKShareKit.framework */; };
+		78A4DE361DF73DCB008AE70B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A4DE351DF73DCB008AE70B /* Bolts.framework */; };
 		78AFD2571DDB6ADE0066B830 /* DetalleUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */; };
 		78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */; };
 		78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8E1DF2171000F1B21F /* Agencia.swift */; };
@@ -65,6 +66,7 @@
 		789E7E0C1DF63273003B5E23 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		789E7E0D1DF63273003B5E23 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		789E7E0E1DF63273003B5E23 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		78A4DE351DF73DCB008AE70B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleUsuario.swift; sourceTree = "<group>"; };
 		78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaAgencia.swift; sourceTree = "<group>"; };
 		78E73E8E1DF2171000F1B21F /* Agencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agencia.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A4DE361DF73DCB008AE70B /* Bolts.framework in Frameworks */,
 				789E7E121DF63273003B5E23 /* FBSDKShareKit.framework in Frameworks */,
 				789E7E101DF63273003B5E23 /* FBSDKLoginKit.framework in Frameworks */,
 				789E7E111DF63273003B5E23 /* FBSDKMessengerShareKit.framework in Frameworks */,
@@ -123,6 +126,7 @@
 		781782E81DDA1B4000A2570E /* AutoUnionAplicacion */ = {
 			isa = PBXGroup;
 			children = (
+				78A4DE351DF73DCB008AE70B /* Bolts.framework */,
 				789E7E0B1DF63273003B5E23 /* FBSDKCoreKit.framework */,
 				789E7E0C1DF63273003B5E23 /* FBSDKLoginKit.framework */,
 				789E7E0D1DF63273003B5E23 /* FBSDKMessengerShareKit.framework */,

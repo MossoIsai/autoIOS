@@ -11,8 +11,8 @@ import Social
 import FBSDKShareKit
 
 
-class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {    
-
+class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,71 +47,57 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         fila.btnSeguir.layer.cornerRadius = 4
         return fila;
     }
- // ::::::::::::::: Controlador de alerta ::::::::::::::::
+    // ::::::::::::::: Controlador de alerta ::::::::::::::::
     @IBAction func btnOpciones(_ sender: Any){
         /* Permite hacer cambios a este boton de diseño
          (sender as! UIButton).backgroundColor =  UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1.0)*/
+        let tituloMensaje =  "Mensaje de ejemplo del titulo para compartir"
         
+        /* var url: String =  "http:www.google.com"
+         var request = URLRequest(url: url)
+         let task = URLSession.shared().dataTask(with: request as URLRequest) {}
+         task.resume()*/
         
-       /* var url: String =  "http:www.google.com"
-        var request = URLRequest(url: url)
-        let task = URLSession.shared().dataTask(with: request as URLRequest) {}
-        task.resume()*/
+        let controladorAlerta =  UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-       let controladorAlerta =  UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-
         //:::::: facebook ::::::::::::::::
         let compartirFacebook =  UIAlertAction(title: "Compartir en Facebook", style: UIAlertActionStyle.default, handler: {
             (alert: UIAlertAction!) -> Void in
-            // SLComposeViewController....se presenta una visión al usuario a componer un mensaje para los servicios de redes sociales compatibles
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook){
-                
-                  let fbShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-                  fbShare.add(UIImage(named: "img3"))
-                  fbShare.setInitialText("Ejemplo de publiación desde la app")
-                    
-                  self.present(fbShare, animated: true, completion: nil)
-
-            }else{
-                let managerControlador = UIAlertController(title: "Cuenta", message: "Inicia sesión en una cuenta de Facebook para compartir", preferredStyle: UIAlertControllerStyle.alert)
-                let actionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+            /* let fbShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+             fbShare.add(UIImage(named: "img3"))
+             fbShare.setInitialText("Ejemplo de publiación desde la app")
+             self.present(fbShare, animated: true, completion: nil)*/
+            let fbContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
+            //fbContent.contentURL = NSURL(string: "http://www.autounion.com") as URL!
+            fbContent.contentTitle = tituloMensaje
+            fbContent.hashtag = FBSDKHashtag(string: "Developer")
+            fbContent.contentDescription = "dedejdedediejidj idejdiejd"
+            fbContent.contentTitle = "Titulo del compartir"
             
-                managerControlador.addAction(actionOK)
-                self.present(managerControlador, animated: true, completion: nil)
-                
-            }
+            
+            FBSDKShareDialog.show(from: self, with: fbContent, delegate: nil)
         })
         compartirFacebook.setValue(UIImage(named: "facebook"), forKey: "image")
-
         //:::::::::::: Twitter ::::::::::::::::
         let compartirTwitter  =  UIAlertAction(title: "Compartir en Twitter", style: UIAlertActionStyle.default, handler: {
             (alert: UIAlertAction!) -> Void in
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter){
-                
-                let twiShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-                
-                self.present(twiShare, animated: true, completion: nil)
-            }else{
-    
-                let managerControlador = UIAlertController(title: "Cuenta", message: "Inicia sesión en una cuenta de Facebook para compartir", preferredStyle: UIAlertControllerStyle.alert)
-                let actionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
-                
-                managerControlador.addAction(actionOK)
-                self.present(managerControlador, animated: true, completion: nil)
-             
-            }
+            
+            let twitterShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            twitterShare.add(UIImage(named: "img3"))
+            twitterShare.setInitialText("Ejemplo de publiación desde la app")
+            self.present(twitterShare, animated: true, completion: nil)
+            
+            
+            
             
         })
         compartirTwitter.setValue(UIImage(named: "twitter"), forKey: "image")
-
         
         let copiarURL = UIAlertAction(title: "Copiar URL", style: UIAlertActionStyle.default, handler: nil)
         copiarURL.setValue(UIImage(named: "link"), forKey: "image")
-
-        
         
         let cancelar =  UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel, handler:nil)
-    
+        
         controladorAlerta.addAction(compartirFacebook)
         controladorAlerta.addAction(compartirTwitter)
         controladorAlerta.addAction(copiarURL)
@@ -119,7 +105,8 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         controladorAlerta.view.tintColor = UIColor.black
         
         self.present(controladorAlerta, animated: true, completion: nil)
-
+        
     }
+    
 }
 
