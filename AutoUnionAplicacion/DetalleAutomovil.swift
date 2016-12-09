@@ -30,7 +30,56 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         buttonSeguir.layer.cornerRadius = 4
         buttonSeguir.layer.shadowRadius = 4
         buttonSeguir.layer.borderColor = UIColor.clear.cgColor
+    }
+    /** -----------------------------
+         button contactame
+        --------------------------------  **/
+    @IBAction func btnContactame(_ sender: Any) {
         
+        let alertManager  = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        /**
+         --------------------------
+         opción llamada
+         --------------------------
+         **/
+        let actionLlamame =  UIAlertAction(title: "Contactarme por llamada", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+        })
+        actionLlamame.setValue(  UIImage(named: "phone") , forKey: "image")
+        /**
+         --------------------------
+         opción enviarme mensaje
+         -------------------------- **/
+        let actionEnviameMail = UIAlertAction(title: "Contactarme por Correo", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+            
+        })
+        actionEnviameMail.setValue(UIImage(named: "message"), forKey: "image")
+        
+        /**
+         --------------------------
+         opción enviarme whatsapp
+         --------------------------
+         **/
+        let actionWhatsapp =  UIAlertAction(title: "Contactarme por Whatsapp", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+        
+            
+        })
+        actionWhatsapp.setValue(UIImage(named: "whatsapp"), forKey: "image")
+        
+        let actionCancelar =  UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        
+        alertManager.addAction(actionLlamame)
+        alertManager.addAction(actionEnviameMail)
+        alertManager.addAction(actionWhatsapp)
+        alertManager.addAction(actionCancelar)
+        alertManager.view.tintColor =  UIColor.black
+        
+        self.present(alertManager, animated: true, completion: nil)
         
         
     }
@@ -153,5 +202,12 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
                 //  self.startButton.alpha = 1.0
             })
         }
+    }
+    /** 
+      ------------------------
+      cargar vistas de Inicio
+      ------------------------ */
+    func cargarVistas(){
+        
     }
 }

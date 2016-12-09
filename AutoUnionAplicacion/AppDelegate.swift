@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  AutoUnionAplicacion
 //
@@ -25,20 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Color del tintoColor
        UINavigationBar.appearance().tintColor = UIColor.black //UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         //background de la barra de navegacion
-        
        /* UINavigationBar.appearance().backgroundColor =  UIColor(red:44/255, green: 25/255, blue: 53/255, alpha: 10)*/
-        
           UINavigationBar.appearance().barTintColor =  UIColor.white //UIColor(red: 44/255, green: 25/255, blue: 53/255, alpha: 1.0)
-      
-        
         /**Textos blanco en los encabezados*/
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
-        
         /**Barra de navegacion*/
         UITabBar.appearance().backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         UITabBar.appearance().tintColor = UIColor.black
-        
-    
        return true
         
     }

@@ -11,6 +11,7 @@ import Social
 import FBSDKShareKit
 
 
+
 class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
@@ -51,44 +52,36 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     @IBAction func btnOpciones(_ sender: Any){
         /* Permite hacer cambios a este boton de diseño
          (sender as! UIButton).backgroundColor =  UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1.0)*/
+        
         let tituloMensaje =  "Mensaje de ejemplo del titulo para compartir"
-        
-        /* var url: String =  "http:www.google.com"
-         var request = URLRequest(url: url)
-         let task = URLSession.shared().dataTask(with: request as URLRequest) {}
-         task.resume()*/
-        
         let controladorAlerta =  UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        //:::::: facebook ::::::::::::::::
+        //::::::::::::::::::: facebook ::::::::::::::::::::::::::::::
         let compartirFacebook =  UIAlertAction(title: "Compartir en Facebook", style: UIAlertActionStyle.default, handler: {
             (alert: UIAlertAction!) -> Void in
-            /* let fbShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-             fbShare.add(UIImage(named: "img3"))
-             fbShare.setInitialText("Ejemplo de publiación desde la app")
-             self.present(fbShare, animated: true, completion: nil)*/
+        
             let fbContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
-            //fbContent.contentURL = NSURL(string: "http://www.autounion.com") as URL!
-            fbContent.contentTitle = tituloMensaje
-            fbContent.hashtag = FBSDKHashtag(string: "Developer")
-            fbContent.contentDescription = "dedejdedediejidj idejdiejd"
-            fbContent.contentTitle = "Titulo del compartir"
             
-            
+            fbContent.contentURL = NSURL(string: "http://www.autounion.com") as URL!
+            fbContent.contentTitle =  "Estupido de conocimiento"
+            fbContent.contentDescription = "Descripción del mensaje"
+            //fbContent.hashtag = FBSDKHashtag(string: "Developer")
+            //fbContent.contentDescription = "dedejdedediejidj idejdiejd"
+            //fbContent.contentTitle = "Titulo del compartir"
+            //fbContent.imageURL =  URL(string: "https://raw.github.com/fbsamples/ios-3.x-howtos/master/Images/iossdk_logo.png")!
             FBSDKShareDialog.show(from: self, with: fbContent, delegate: nil)
+            
         })
         compartirFacebook.setValue(UIImage(named: "facebook"), forKey: "image")
-        //:::::::::::: Twitter ::::::::::::::::
+        //:::::::::::::::::::::: Twitter ::::::::::::::::::::::::::
         let compartirTwitter  =  UIAlertAction(title: "Compartir en Twitter", style: UIAlertActionStyle.default, handler: {
             (alert: UIAlertAction!) -> Void in
             
             let twitterShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            twitterShare.add(UIImage(named: "img3"))
-            twitterShare.setInitialText("Ejemplo de publiación desde la app")
+            twitterShare.add(UIImage(named: "q1_2"))
+            twitterShare.add(NSURL(string: "www.autounion.com") as! URL)
+            twitterShare.setInitialText("Audi A3 1.4 S-TRONIC 2016, $1,300,000.00 M.N")
             self.present(twitterShare, animated: true, completion: nil)
-            
-            
-            
             
         })
         compartirTwitter.setValue(UIImage(named: "twitter"), forKey: "image")
@@ -105,7 +98,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         controladorAlerta.view.tintColor = UIColor.black
         
         self.present(controladorAlerta, animated: true, completion: nil)
-        
+
     }
     
 }
