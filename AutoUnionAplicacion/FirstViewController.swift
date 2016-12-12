@@ -9,14 +9,43 @@
 import UIKit
 import Social
 import FBSDKShareKit
+import Alamofire
 
 
 
 class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
+    private let linkAuto: String =  "http://192.168.69.36:8080/autoUnion/pruebaGSON.jsp"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        /** ::::::::::: LECTURA Y PARSEO DEL JSON ::::::::**/
+        let parameters: Parameters = ["foo": "bar"]
+        //reauest("urlConecction",metodo(.post/.get),paramtetros,codificaciónJSON)
+        Alamofire.request(linkAuto, method: .get, parameters: parameters, encoding: JSONEncoding.default)
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                print("Progress: \(progress.fractionCompleted)")
+            }
+            .validate { request, response, data in
+
+                // El cierre de la evaluación personalizada ahora incluye datos (le permite analizar datos para extraer mensajes de error si es necesario)
+                return .success
+            }
+            .responseJSON {
+                response in
+                debugPrint(response)
+        }
+        print(":::::::::: SEGUNDA PETICIÓN::::::")
+        
+        /**Alamofire.request(linkAuto).response{ response in
+            debugPrint(response)
+            print("Mensaje de la seguna petición")
+        }**/
+        
+        
+        /**:::::::::: FIN DE LA LECTURA Y PARSEO DEL JSON ::::::::*/
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 100
@@ -32,7 +61,6 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         let automovil: UIImage =  UIImage(named: "q1_2")!
         let corazon: UIImage =   UIImage(named: "corazon")!
         let empresa: UIImage =  UIImage(named: "audi_logo")!
-        //let mas: UIImage =  UIImage(named: "")!
         fila.imgAuto.image = automovil
         fila.logoEmpresa.image =  empresa
         fila.imgCorazon.image = corazon
@@ -53,13 +81,12 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         /* Permite hacer cambios a este boton de diseño
          (sender as! UIButton).backgroundColor =  UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1.0)*/
         
-        let tituloMensaje =  "Mensaje de ejemplo del titulo para compartir"
         let controladorAlerta =  UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         //::::::::::::::::::: facebook ::::::::::::::::::::::::::::::
         let compartirFacebook =  UIAlertAction(title: "Compartir en Facebook", style: UIAlertActionStyle.default, handler: {
             (alert: UIAlertAction!) -> Void in
-        
+            
             let fbContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
             
             fbContent.contentURL = NSURL(string: "http://www.autounion.com") as URL!
@@ -98,7 +125,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         controladorAlerta.view.tintColor = UIColor.black
         
         self.present(controladorAlerta, animated: true, completion: nil)
-
+        
     }
     
 }
