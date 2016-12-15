@@ -19,7 +19,6 @@
         
         let marcasArray:[String] = ["Acura", "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "FAW", "Ferrari", "Fiat", "Ford", "GMC", "Honda", "Hummer", "Hyundai", "Infiniti", "Isuzu", "Jaguar", "Jeep", "Kia", "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Lotus", "Maserati", "Mastretta", "Maybach", "Mazda", "McLaren", "Mercedes Benz", "Mercury", "MG", "Mini", "Mitsubishi", "Nissan", "Opel", "Peugeot", "Pontiac", "Porsche", "Renault", "Rolls Royce", "Rover", "Saab", "Saturn", "Smart", "Ssangyong", "Subaru", "Suzuki", "Toyota", "Volkswagen", "Volvo", "Otras Marcas"]
         
-        
         let modelosArray:[String] =  ["1500", "3500", "454", "Aerostar", "Apache", "Astra", "Astro Safari", "Astro Van", "Avalanche", "Aveo", "Beretta", "Blazer", "Buick", "C-15", "C-20", "Camaro", "Camaro Hot Wheels", "Camaro ZLI", "Capriche", "Captiva", "Cavallier", "Cavallier Z24", "Celebrity", "Century", "Chevelle", "Chevette", "Chevy", "Chevy Nova", "Chevy Pick Up", "Chevy Van", "Cheyenne", "Colorado", "Corsa", "Corvette", "Cruze", "Cutlass", "Epica", "Equinox", "Express Van", "Geo", "HHR", "Hi-Top", "Impala", "Kodiak", "Lumina", "LUV", "Malibú", "Matiz2", "Meriva", "Monte Carlo", "Monza", "Oldsmobile", "Optra", "Orlando", "Pick-Up", "Routan", "S10", "Saturn", "Savana", "Sierra", "Silhouette", "Silverado", "Sonic", "Sonora", "Spark", "Suburban", "Tahoe", "Tigra", "Tornado", "Tracker", "TrailBlazer", "Transport", "Traverse", "Trax", "Uplander", "Vanette", "Vectra", "Venture", "Volt", "Zafira", "Otros Modelos"]
         
         @IBOutlet weak var marca: UITextField!
@@ -104,8 +103,6 @@
         func cancelarMarca(){
             self.marca.resignFirstResponder()
         }
-        
-        
         //::::::::: CUANDO PRESIONAS DENTRO DEL TEXTFIELD::::::::::::::::
         func textFieldDidBeginEditing(_ textField: UITextField) {
             self.pickerMarca(textFieldMarca: self.marca)
@@ -143,17 +140,13 @@
                 self.modeloAuto = modelosArray[row]
             }
         }
-        
-        
         /*func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
          
          let  attributecolor : NSAttributedString!
          attributecolor =  NSAttributedString(string: marcasArray[row], attributes: [NSForegroundColorAttributeName : UIColor.white])
          
          return attributecolor
-         
          }*/
-        
         //:::::::::::::::::::::::::::. PICKER MODELO ::::::::::::::::::::::::::
         func pickerModelo(textFieldModelo: UITextField) {
             // metodo para crear la interfaz del spiner del Modelo
@@ -194,7 +187,6 @@
             
         }
         /**::::::::::::::::::::: METODOS::::::::::::::*/
-        
         func showAlerta(titulo:String, mensaje:String){
             
             let alerta =  UIAlertController(title: titulo, message: mensaje, preferredStyle: UIAlertControllerStyle.alert)
@@ -204,8 +196,6 @@
             alerta.addAction(ok)
             
             self.present(alerta, animated: true, completion: nil)
-            
-            
         }
     }
     

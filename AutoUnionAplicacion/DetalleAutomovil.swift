@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import FBSDKShareKit
+import Social
+
 class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
     
     //vinculación de los elementos de storyBoard y el codigo
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var labAgencia: UILabel!
     @IBOutlet weak var labEspecificacion: UILabel!
     @IBOutlet weak var precio: UILabel!
     @IBOutlet weak var btnSeguir: UIButton!
-    
     //Boton Seguir
     @IBAction func btnSeguir(_ sender: Any) {
         
@@ -66,7 +67,6 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         let actionWhatsapp =  UIAlertAction(title: "Contactarme por Whatsapp", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             
-        
             
         })
         actionWhatsapp.setValue(UIImage(named: "whatsapp"), forKey: "image")
@@ -78,9 +78,8 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         alertManager.addAction(actionWhatsapp)
         alertManager.addAction(actionCancelar)
         alertManager.view.tintColor =  UIColor.black
-        
+
         self.present(alertManager, animated: true, completion: nil)
-        
         
     }
     //Boton Compartir
@@ -89,18 +88,33 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         let controladorAlerta =  UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         
-        let compartirFacebook =  UIAlertAction(title: "Compartir en Facebook", style: UIAlertActionStyle.default, handler: nil)
+        let compartirFacebook =  UIAlertAction(title: "Compartir en Facebook", style: UIAlertActionStyle.default, handler: {
+            (alert:UIAlertAction!)-> Void in
+            /*** ::::::::::::::: FACEBOOK :::::::::::::::::.***/
+            let fbContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
+            fbContent.contentURL = NSURL(string: "http://www.autounion.com") as URL!
+            fbContent.contentTitle =  "Estupido de conocimiento"
+            fbContent.contentDescription = "Descripción del mensaje"
+            FBSDKShareDialog.show(from: self, with: fbContent, delegate: nil)
+
+        })
         compartirFacebook.setValue(UIImage(named: "facebook"), forKey: "image")
-        
-        
-        let compartirTwitter  =  UIAlertAction(title: "Compartir en Twitter", style: UIAlertActionStyle.default, handler: nil)
+        /**:::::::::::::: TWIITER::::::::::::::::*/
+        let compartirTwitter  =  UIAlertAction(title: "Compartir en Twitter", style: UIAlertActionStyle.default, handler: {
+            (alert:UIAlertAction!) -> Void in
+            let compartirTwitter:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            
+            compartirTwitter.add(UIImage(named:"q1_2"))
+            compartirTwitter.add(NSURL(string: "www.autounion.com") as! URL)
+            compartirTwitter.setInitialText("Audi A3 1.4 S-TRONIC 2016, $1,300,000.00 M.N")
+            self.present(compartirTwitter, animated: true, completion: nil)
+            
+        })
         compartirTwitter.setValue(UIImage(named: "twitter"), forKey: "image")
         
         
         let copiarURL = UIAlertAction(title: "Copiar URL", style: UIAlertActionStyle.default, handler: nil)
         copiarURL.setValue(UIImage(named: "link"), forKey: "image")
-        
-        
         
         let cancelar =  UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel, handler:nil)
         
@@ -178,7 +192,7 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         self.pageControll.currentPage = Int(currentPage)
         
         if Int(currentPage) == 0{
-            
+        
         }
     }
     //MARK: UIScrollView Delegate

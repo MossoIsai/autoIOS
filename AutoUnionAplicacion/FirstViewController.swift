@@ -11,15 +11,16 @@ import Social
 import FBSDKShareKit
 import Alamofire
 
-
-
 class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     private let linkAuto: String =  "http://192.168.69.36:8080/autoUnion/pruebaGSON.jsp"
-    
+    var automovil:Automovil  = Automovil()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        automovil.anioGetYSet = 20
+        let anio:Int =  automovil.anioGetYSet
         
         /** ::::::::::: LECTURA Y PARSEO DEL JSON ::::::::**/
         let parameters: Parameters = ["foo": "bar"]
@@ -36,8 +37,15 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
             .responseJSON {
                 response in
                 debugPrint(response)
+                if let result = response.result.value {
+                    let JSON = result as! NSArray
+                    var tamano =  JSON.count
+                    print("Tamaño\( JSON.value(forKey: "locNombre"))")
+                    
+                }
+                
         }
-        print(":::::::::: SEGUNDA PETICIÓN::::::")
+        //print(":::::::::: SEGUNDA PETICIÓN::::::")
         
         /**Alamofire.request(linkAuto).response{ response in
             debugPrint(response)
