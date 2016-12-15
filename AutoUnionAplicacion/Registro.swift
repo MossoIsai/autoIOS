@@ -29,11 +29,11 @@ class Registro: UIViewController {
             cargarVistas()
     }
     
+  
     
-    @IBAction func btnSeguiente(_ sender: Any) {
-        self.validarTelefono(textTelefono: telefono)
+    @IBAction func btnSiguiente(_ sender: Any) {
+         self.validarTelefono(textTelefono: telefono)
     }
-    
     
     func cargarVistas(){
         //vista borrosa
@@ -100,7 +100,7 @@ class Registro: UIViewController {
         
         //lyendda de whatsapp
         
-        self.etiquetaWhatsapp.text = "Utilizar este número telefonico para la comunicación via whatsapp"
+        self.etiquetaWhatsapp.text = "Utilizar este número telefonico para la comunicación via whatsapp."
         
         self.telefono.textAlignment = .center
         self.email.textAlignment = .center
