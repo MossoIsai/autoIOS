@@ -16,11 +16,14 @@ class Registro: UIViewController {
     @IBOutlet weak var seccionIniciaSesion: UIView!
     //@IBOutlet weak var segmentRegistro: UISegmentedControl!
     @IBOutlet weak var btnNextStyle: UIButton!
+    
+    @IBOutlet weak var terminos_condiciones: UILabel!
     //@IBOutlet weak var imagenFondo: UIImageView!
     @IBOutlet weak var telefono: UITextField!
    // var moviePlayer: MPMoviePlayerController?
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var etiquetaWhatsapp: UILabel!
+    @IBOutlet weak var switchWhats: UISwitch!
 
     
     override func viewDidLoad() {
@@ -34,6 +37,12 @@ class Registro: UIViewController {
     @IBAction func btnSiguiente(_ sender: Any) {
          self.validarTelefono(textTelefono: telefono)
     }
+    
+    
+    
+    @IBAction func switchWhatsapp(_ sender: Any) {
+    }
+    
     
     func cargarVistas(){
         //vista borrosa
@@ -110,6 +119,10 @@ class Registro: UIViewController {
         buttonConfirmar.setImage(UIImage(named:"check_on"), for: .selected)
         buttonConfirmar.setImage(UIImage(named:"check_off"), for: .normal)
         
+        self.terminos_condiciones.text = "Al registrarte, aceptas nuestras Condiciones y la Politica de privacidad."
+        self.terminos_condiciones.textAlignment = .center
+        
+
         
     }
     //Validar textoField Telefono

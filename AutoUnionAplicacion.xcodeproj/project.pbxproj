@@ -19,6 +19,7 @@
 		7817831A1DDA23EB00A2570E /* FilaModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781783191DDA23EB00A2570E /* FilaModelo.swift */; };
 		7817831C1DDA48B900A2570E /* DetalleAutomovil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */; };
 		78276DFE1E02FDF80037EF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78276DFD1E02FDF80037EF0D /* Main.storyboard */; };
+		78276E001E0320D40037EF0D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78276DFF1E0320D40037EF0D /* Login.swift */; };
 		78363DEB1E005AF8006135B9 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78363DEA1E005AF8006135B9 /* Usuario.swift */; };
 		78363DEE1E008393006135B9 /* AgenciaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78363DED1E008393006135B9 /* AgenciaModel.swift */; };
 		789E7E0F1DF63273003B5E23 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E7E0B1DF63273003B5E23 /* FBSDKCoreKit.framework */; };
@@ -31,6 +32,7 @@
 		78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */; };
 		78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8E1DF2171000F1B21F /* Agencia.swift */; };
 		78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECB73A1DF5CD25008AED57 /* Asistencia.swift */; };
+		78FA94F51E03624A004AE8F4 /* SMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA94F41E03624A004AE8F4 /* SMS.swift */; };
 		78FB88B51E01A4AD00D40FA9 /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB88B41E01A4AC00D40FA9 /* Registro.swift */; };
 		F61E7B28E5EDE06906A42BFF /* Pods_AutoUnionAplicacionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290D29AA62CA6EB15891E2C5 /* Pods_AutoUnionAplicacionUITests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,7 @@
 		781783191DDA23EB00A2570E /* FilaModelo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaModelo.swift; sourceTree = "<group>"; };
 		7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAutomovil.swift; sourceTree = "<group>"; };
 		78276DFD1E02FDF80037EF0D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		78276DFF1E0320D40037EF0D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		78363DEA1E005AF8006135B9 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		78363DED1E008393006135B9 /* AgenciaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgenciaModel.swift; sourceTree = "<group>"; };
 		785B8A031E01D4BF00C5A231 /* video_auto.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_auto.mp4; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaAgencia.swift; sourceTree = "<group>"; };
 		78E73E8E1DF2171000F1B21F /* Agencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agencia.swift; sourceTree = "<group>"; };
 		78ECB73A1DF5CD25008AED57 /* Asistencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asistencia.swift; sourceTree = "<group>"; };
+		78FA94F41E03624A004AE8F4 /* SMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMS.swift; sourceTree = "<group>"; };
 		78FB88B41E01A4AC00D40FA9 /* Registro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registro.swift; sourceTree = "<group>"; };
 		A63259FE10DC3D87D85EEB2A /* Pods-AutoUnionAplicacion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacion.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacion/Pods-AutoUnionAplicacion.release.xcconfig"; sourceTree = "<group>"; };
 		C21FC16CC946E0837E915077 /* Pods-AutoUnionAplicacion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacion/Pods-AutoUnionAplicacion.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				781783191DDA23EB00A2570E /* FilaModelo.swift */,
 				781782EB1DDA1B4000A2570E /* FirstViewController.swift */,
 				78FB88B41E01A4AC00D40FA9 /* Registro.swift */,
+				78276DFF1E0320D40037EF0D /* Login.swift */,
+				78FA94F41E03624A004AE8F4 /* SMS.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -534,7 +540,9 @@
 				7817831C1DDA48B900A2570E /* DetalleAutomovil.swift in Sources */,
 				781782EA1DDA1B4000A2570E /* AppDelegate.swift in Sources */,
 				781782EC1DDA1B4000A2570E /* FirstViewController.swift in Sources */,
+				78FA94F51E03624A004AE8F4 /* SMS.swift in Sources */,
 				78B5CF3C1DFF644E00FF4C6F /* Automovil.swift in Sources */,
+				78276E001E0320D40037EF0D /* Login.swift in Sources */,
 				78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */,
 				78FB88B51E01A4AD00D40FA9 /* Registro.swift in Sources */,
 				78AFD2571DDB6ADE0066B830 /* DetalleUsuario.swift in Sources */,
