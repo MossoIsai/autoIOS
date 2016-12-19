@@ -20,21 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //Color del texto del background
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
-        
+        /*UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]*/
        /* UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 102/255, green: 65/255, blue: 88/255, alpha: 1.0)]*/
         // Title's text color
-        //Color del tintoColor
-       UINavigationBar.appearance().tintColor = UIColor(red: 102/255, green: 65/255, blue: 88/255, alpha: 1.0)
-        //background de la barra de navegacion
-       /* UINavigationBar.appearance().backgroundColor =  UIColor(red:44/255, green: 25/255, blue: 53/255, alpha: 10)*/
-        UINavigationBar.appearance().barTintColor =  UIColor.white
+       UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().barTintColor =  UIColor(red: 252/255, green: 192/255, blue: 60/255, alpha: 1)
 //UIColor(red: 44/255, green: 25/255, blue: 53/255, alpha: 1.0)
         /**Textos blanco en los encabezados*/
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         /**Barra de navegacion*/
-        UITabBar.appearance().backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
-        
+        UITabBar.appearance().backgroundColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.black
        return true
         

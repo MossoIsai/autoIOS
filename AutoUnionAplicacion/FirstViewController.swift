@@ -15,10 +15,16 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     
     private let linkAuto: String =  "http://192.168.69.36:8080/autoUnion/pruebaGSON.jsp"
     var automovil:Automovil  = Automovil()
-
-    
+  /**Pone en blanclo los componenres de arriba*/
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+       return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
+
+        
+        
         automovil.anioGetYSet = 20
         let anio:Int =  automovil.anioGetYSet
         
