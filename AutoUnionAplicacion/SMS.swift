@@ -14,8 +14,16 @@ class SMS: UIViewController{
     @IBOutlet weak var sms: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var vistaDown: UIView!
+    @IBOutlet weak var terminosCondiciones: UILabel!
     
-    
+    @IBOutlet weak var labelSMS: UILabel!
+    @IBOutlet weak var labelPassword: UILabel!
+    @IBOutlet weak var btnSiguiente: UIButton!
+    @IBAction func btnSiguiente(_ sender: Any) {
+        let checar:UIButton = (sender) as! UIButton;
+        //let imagen = UIImage(named: "check_on")
+        //checar.setImage(imagen, for: .normal)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,12 +42,51 @@ class SMS: UIViewController{
             
             alerta.addAction(ok)
             present(alerta, animated: true, completion: nil)
+        }else if((longitudCode?.count)! < 4){
+            
+            let alerta =  UIAlertController(title: "Código incorrecto", message: "El código de verificación es incorrecto", preferredStyle:.alert)
+            
+            let ok =  UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+            
+            alerta.addAction(ok)
+            present(alerta, animated: true, completion: nil)
+            
+            
         }
-        
+        //Confuración de las vistas
         vistaDown.layer.backgroundColor = UIColor.white.cgColor
         vistaDown.layer.borderColor = UIColor.gray.cgColor
         vistaDown.layer.borderWidth = 0.4
 
+        terminosCondiciones.text = "Al registrarte, aceptas nuestras Condiciones y la Politica de privacidad."
+        
+       /* btnSiguiente.layer.backgroundColor = UIColor.clear.cgColor
+        btnSiguiente.layer.borderWidth = 1
+        btnSiguiente.layer.borderColor = UIColor.black.cgColor
+        btnSiguiente.layer.cornerRadius = 4*/
+        btnSiguiente.backgroundColor =  UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1)
+        btnSiguiente.layer.cornerRadius = 4
+        btnSiguiente.layer.borderWidth = 1
+        btnSiguiente.layer.borderColor = UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1).cgColor
+        
+        //label introduce cófigo de verificacion
+        labelSMS.lineBreakMode = NSLineBreakMode.byCharWrapping
+        labelSMS.numberOfLines = 2
+        labelSMS.textAlignment = .center
+        
+        labelPassword.lineBreakMode = NSLineBreakMode.byCharWrapping
+        labelPassword.numberOfLines = 2
+        labelPassword.textAlignment = .center
+        
+        
+    terminosCondiciones.lineBreakMode = NSLineBreakMode.byCharWrapping
+        terminosCondiciones.numberOfLines = 2
+        terminosCondiciones.textAlignment = .center
+        
+        
+        
+        
+        
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

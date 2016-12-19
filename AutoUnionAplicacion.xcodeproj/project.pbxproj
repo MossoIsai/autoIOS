@@ -34,6 +34,7 @@
 		78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECB73A1DF5CD25008AED57 /* Asistencia.swift */; };
 		78FA94F51E03624A004AE8F4 /* SMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA94F41E03624A004AE8F4 /* SMS.swift */; };
 		78FB88B51E01A4AD00D40FA9 /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB88B41E01A4AC00D40FA9 /* Registro.swift */; };
+		78FBAA3B1E08328600F7A516 /* Alertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FBAA3A1E08328600F7A516 /* Alertas.swift */; };
 		F61E7B28E5EDE06906A42BFF /* Pods_AutoUnionAplicacionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290D29AA62CA6EB15891E2C5 /* Pods_AutoUnionAplicacionUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		78ECB73A1DF5CD25008AED57 /* Asistencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asistencia.swift; sourceTree = "<group>"; };
 		78FA94F41E03624A004AE8F4 /* SMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMS.swift; sourceTree = "<group>"; };
 		78FB88B41E01A4AC00D40FA9 /* Registro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registro.swift; sourceTree = "<group>"; };
+		78FBAA3A1E08328600F7A516 /* Alertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertas.swift; sourceTree = "<group>"; };
 		A63259FE10DC3D87D85EEB2A /* Pods-AutoUnionAplicacion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacion.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacion/Pods-AutoUnionAplicacion.release.xcconfig"; sourceTree = "<group>"; };
 		C21FC16CC946E0837E915077 /* Pods-AutoUnionAplicacion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacion/Pods-AutoUnionAplicacion.debug.xcconfig"; sourceTree = "<group>"; };
 		D7D8D5E4CADC60B8BBDFD7BC /* Pods-AutoUnionAplicacionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacionTests/Pods-AutoUnionAplicacionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				781782E91DDA1B4000A2570E /* AppDelegate.swift */,
 				781782F41DDA1B4000A2570E /* LaunchScreen.storyboard */,
 				781782F71DDA1B4000A2570E /* Info.plist */,
+				78FBAA391E08323A00F7A516 /* Metodos */,
 			);
 			path = AutoUnionAplicacion;
 			sourceTree = "<group>";
@@ -238,6 +241,14 @@
 			children = (
 			);
 			name = Ressources;
+			sourceTree = "<group>";
+		};
+		78FBAA391E08323A00F7A516 /* Metodos */ = {
+			isa = PBXGroup;
+			children = (
+				78FBAA3A1E08328600F7A516 /* Alertas.swift */,
+			);
+			name = Metodos;
 			sourceTree = "<group>";
 		};
 		AB236A39B7CFEB56B6955CC4 /* Frameworks */ = {
@@ -538,6 +549,7 @@
 				78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */,
 				781782EE1DDA1B4000A2570E /* Buscar.swift in Sources */,
 				7817831C1DDA48B900A2570E /* DetalleAutomovil.swift in Sources */,
+				78FBAA3B1E08328600F7A516 /* Alertas.swift in Sources */,
 				781782EA1DDA1B4000A2570E /* AppDelegate.swift in Sources */,
 				781782EC1DDA1B4000A2570E /* FirstViewController.swift in Sources */,
 				78FA94F51E03624A004AE8F4 /* SMS.swift in Sources */,

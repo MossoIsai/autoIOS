@@ -23,27 +23,32 @@ class Registro: UIViewController {
    // var moviePlayer: MPMoviePlayerController?
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var etiquetaWhatsapp: UILabel!
-    @IBOutlet weak var switchWhats: UISwitch!
+    @IBOutlet weak var btnSwitch: UIButton!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
             cargarVistas()
     }
-    
-  
-    
     @IBAction func btnSiguiente(_ sender: Any) {
          self.validarTelefono(textTelefono: telefono)
     }
-    
-    
-    
-    @IBAction func switchWhatsapp(_ sender: Any) {
+    @IBAction func btnCheck(_ sender: Any) {
+        
+        if(telefono.text == ""){
+            
+            let mensajeAlerta = Alertas()
+            mensajeAlerta.showAlert(controller: self, titulo: "Ingresa tu número telefonico", mensaje: "El número de telefonico no es valido")
+            
+        }else{
+            
+            let btn = (sender) as? UIButton;
+            let imagen = UIImage(named: "check_on")
+            btn?.setImage(imagen, for: .normal)
+        }
+        
+        
     }
-    
-    
     func cargarVistas(){
         //vista borrosa
         
@@ -91,26 +96,31 @@ class Registro: UIViewController {
         self.seccionIniciaSesion.layer.borderColor = UIColor.gray.cgColor
         self.seccionIniciaSesion.layer.backgroundColor =  UIColor.clear.cgColor
         self.view.addSubview(seccionIniciaSesion)
-        
-        
        // self.segmentRegistro.tintColor = UIColor.black
         
-        //Button siguiente
-        self.btnNextStyle.layer.backgroundColor =  UIColor.orange.cgColor
+        //Button siguiente simple negro
+        /**self.btnNextStyle.layer.backgroundColor =  UIColor.clear.cgColor
         self.btnNextStyle.layer.cornerRadius = 4
-        self.btnNextStyle.layer.borderColor = UIColor.orange.cgColor
+        self.btnNextStyle.layer.borderColor = UIColor.black.cgColor
+        self.btnNextStyle.layer.borderWidth = 1**/
+        self.btnNextStyle.backgroundColor =  UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1)
+        self.btnNextStyle.layer.cornerRadius = 4
         self.btnNextStyle.layer.borderWidth = 1
+        self.btnNextStyle.layer.borderColor = UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1).cgColor
         
        // self.imagenFondo.image = UIImage(named: "car2")
         
        // self.view.addSubview(segmentRegistro)
-        self.view.addSubview(btnNextStyle)
-        self.view.addSubview(telefono)
+        //self.view.addSubview(btnNextStyle)
+       // self.view.addSubview(telefono)
         
         //lyendda de whatsapp
         
         self.etiquetaWhatsapp.text = "Utilizar este número telefonico para la comunicación via whatsapp."
         
+        self.etiquetaWhatsapp.lineBreakMode = NSLineBreakMode.byWordWrapping
+        etiquetaWhatsapp.numberOfLines = 2
+        //etiquetaWhatsapp.textAlignment = .center
         self.telefono.textAlignment = .center
         self.email.textAlignment = .center
         
@@ -120,41 +130,33 @@ class Registro: UIViewController {
         buttonConfirmar.setImage(UIImage(named:"check_off"), for: .normal)
         
         self.terminos_condiciones.text = "Al registrarte, aceptas nuestras Condiciones y la Politica de privacidad."
+        
+        
+        self.terminos_condiciones.lineBreakMode = NSLineBreakMode.byWordWrapping
+        self.terminos_condiciones.numberOfLines = 2
+        
         self.terminos_condiciones.textAlignment = .center
         
-
-        
+    
     }
     //Validar textoField Telefono
     func validarTelefono(textTelefono:UITextField!){
         let celular = textTelefono.text
+        let mensajeAlerta  = Alertas() //variable  de alerta aceptar
         
         if(celular == ""){
-            let managerAlerta =  UIAlertController(title:"Agregar un teléfono", message: "Para poder seguir con el registro es necesario proporcinar un número telefonico", preferredStyle: .alert)
-            
-            let ok = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
-            
-            managerAlerta.addAction(ok)
-            self.present(managerAlerta, animated: true, completion: nil)
+           
+            mensajeAlerta.showAlert(controller: self, titulo: "Agregar un teléfono", mensaje: "Para poder seguir con el registro es necesario proporcinar un número telefonico")
             
         }else if((celular?.characters.count)! > 10){
             
-            let managerAlerta =  UIAlertController(title:"Teléfono no valido", message: "El número de telefonico no es valido", preferredStyle: .alert)
-            
-            let ok = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
-            
-            managerAlerta.addAction(ok)
-            self.present(managerAlerta, animated: true, completion: nil)
+            mensajeAlerta.showAlert(controller: self, titulo: "Teléfono no valido", mensaje: "El número de telefonico no es valido")
             
         }else if((celular?.characters.count)! < 10){
             
-            let managerAlerta =  UIAlertController(title:"Teléfono no valido", message: "El número de telefonico no es valido", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
-            managerAlerta.addAction(ok)
-            self.present(managerAlerta, animated: true, completion: nil)
-            
-        }
+            mensajeAlerta.showAlert(controller: self, titulo: "Teléfono no valido", mensaje: "El número de telefonico no es valido")
         
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
