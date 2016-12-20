@@ -16,13 +16,16 @@ class SMS: UIViewController{
     @IBOutlet weak var vistaDown: UIView!
     @IBOutlet weak var terminosCondiciones: UILabel!
     
+    @IBOutlet weak var confirmarPassword: UITextField!
+    
     @IBOutlet weak var labelSMS: UILabel!
     @IBOutlet weak var labelPassword: UILabel!
     @IBOutlet weak var btnSiguiente: UIButton!
     @IBAction func btnSiguiente(_ sender: Any) {
-        let checar:UIButton = (sender) as! UIButton;
-        //let imagen = UIImage(named: "check_on")
-        //checar.setImage(imagen, for: .normal)
+      
+      let mensajeAlerta = Alertas()
+        mensajeAlerta.showAlert(controller: self, titulo: "Código de Activación", mensaje: "En breve recibiras un código de activación de 4 digitos por correo electrónico.")
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,7 @@ class SMS: UIViewController{
         
     }
     func cargarVista() {
+        
         self.sms.textAlignment = .center
         self.password.textAlignment = .center
         let longitudCode = self.password.text?.characters
@@ -72,16 +76,19 @@ class SMS: UIViewController{
         //label introduce cófigo de verificacion
         labelSMS.lineBreakMode = NSLineBreakMode.byCharWrapping
         labelSMS.numberOfLines = 2
-        labelSMS.textAlignment = .center
+        labelSMS.textAlignment = .left
         
         labelPassword.lineBreakMode = NSLineBreakMode.byCharWrapping
         labelPassword.numberOfLines = 2
-        labelPassword.textAlignment = .center
+        labelPassword.textAlignment = .left
         
         
     terminosCondiciones.lineBreakMode = NSLineBreakMode.byCharWrapping
         terminosCondiciones.numberOfLines = 2
         terminosCondiciones.textAlignment = .center
+        
+        
+    confirmarPassword.textAlignment = .center
         
         
         
