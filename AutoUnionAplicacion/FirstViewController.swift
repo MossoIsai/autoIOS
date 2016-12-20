@@ -22,12 +22,9 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
-
-        
-        
+    
         automovil.anioGetYSet = 20
         let anio:Int =  automovil.anioGetYSet
-        
         /** ::::::::::: LECTURA Y PARSEO DEL JSON ::::::::**/
         let parameters: Parameters = ["foo": "bar"]
         //reauest("urlConecction",metodo(.post/.get),paramtetros,codificaciónJSON)
@@ -47,9 +44,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
                     let JSON = result as! NSArray
                     var tamano =  JSON.count
                     print("Tamaño\( JSON.value(forKey: "locNombre"))")
-                    
                 }
-                
         }
         //print(":::::::::: SEGUNDA PETICIÓN::::::")
         
@@ -72,7 +67,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         fila.precio.text = "$ 1, 000, 000 M.N"
         fila.datosAuto.text = "Audi R8 Multitronic 2016"
         
-        let automovil: UIImage =  UIImage(named: "q1_2")!
+        let automovil: UIImage =  UIImage(named: "img3 ")!
         let corazon: UIImage =   UIImage(named: "corazon")!
         let empresa: UIImage =  UIImage(named: "audi_logo")!
         fila.imgAuto.image = automovil

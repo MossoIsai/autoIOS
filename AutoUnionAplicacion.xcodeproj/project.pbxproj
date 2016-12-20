@@ -60,6 +60,8 @@
 		290D29AA62CA6EB15891E2C5 /* Pods_AutoUnionAplicacionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoUnionAplicacionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		534C6D213AEE6B922E05B960 /* Pods-AutoUnionAplicacionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacionTests/Pods-AutoUnionAplicacionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B1962C956E9DA36E23D2E77 /* Pods-AutoUnionAplicacionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacionUITests/Pods-AutoUnionAplicacionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		781747751E09B39700B4BFFF /* exo_font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = exo_font.otf; sourceTree = "<group>"; };
+		781747761E09B39700B4BFFF /* libre2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = libre2.ttf; sourceTree = "<group>"; };
 		781782E61DDA1B4000A2570E /* AutoUnionAplicacion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoUnionAplicacion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781782E91DDA1B4000A2570E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		781782EB1DDA1B4000A2570E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +241,8 @@
 		78E0DD391DDA95D3002A97F5 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				781747751E09B39700B4BFFF /* exo_font.otf */,
+				781747761E09B39700B4BFFF /* libre2.ttf */,
 			);
 			name = Ressources;
 			sourceTree = "<group>";
