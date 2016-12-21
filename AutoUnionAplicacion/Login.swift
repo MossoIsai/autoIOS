@@ -39,14 +39,15 @@ class Login: UIViewController {
 override func viewDidLoad() {
     super.viewDidLoad()
     cargarVistas()
-    let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+    /**Reproducir video**/
+    /*let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
     let player = AVPlayer(url: videoURL! as URL)
     let playerLayer = AVPlayerLayer(player: player)
     //playerLayer.frame = self.view.bounds
     // playerLayer.frame = self.viewTop.frame.width
     // self.view.layer.addSublayer(playerLayer)
     self.viewTop.layer.addSublayer(playerLayer)
-    player.play()
+    player.play()*/
 }
 func cargarVistas() {
     self.correo.text = "ing.isaimosso@gmail.com"

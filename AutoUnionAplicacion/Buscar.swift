@@ -46,6 +46,8 @@
         }
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            
             //Asigno el delegado a los textField
             self.marca.delegate = self
             self.modelo.delegate = self
@@ -197,5 +199,9 @@
             
             self.present(alerta, animated: true, completion: nil)
         }
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
+        
     }
     

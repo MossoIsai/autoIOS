@@ -67,10 +67,15 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         fila.precio.text = "$ 1, 000, 000 M.N"
         fila.datosAuto.text = "Audi R8 Multitronic 2016"
         
-        let automovil: UIImage =  UIImage(named: "img3 ")!
+        let automovil: UIImage =  UIImage(named: "r8")!
+        
         let corazon: UIImage =   UIImage(named: "corazon")!
         let empresa: UIImage =  UIImage(named: "audi_logo")!
         fila.imgAuto.image = automovil
+        fila.imgAuto.clipsToBounds = true
+        fila.imgAuto.contentMode = .scaleAspectFit
+        
+        
         fila.logoEmpresa.image =  empresa
         fila.imgCorazon.image = corazon
         // Iconos redondeado de la empresa

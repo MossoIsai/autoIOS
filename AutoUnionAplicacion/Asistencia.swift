@@ -12,8 +12,7 @@ import MessageUI
 import ContactsUI
 
 class Asistencia: UIViewController,UITableViewDelegate,UITableViewDataSource,MFMailComposeViewControllerDelegate,CNContactPickerDelegate {
-    
-    
+
     @IBOutlet weak var tittle: UILabel!
     @IBOutlet weak var subTittle: UILabel!
     
@@ -32,8 +31,8 @@ class Asistencia: UIViewController,UITableViewDelegate,UITableViewDataSource,MFM
         let cell =  UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "celda")
         cell.textLabel?.text = "Audi Cuernavaca"
         cell.textLabel?.font = UIFont(name:"HelveticaNeue-Bold", size:20)
-        cell.detailTextLabel?.font =  UIFont(name: "Farah", size: 18)
-        cell.textLabel?.textColor =  UIColor(red:110/255, green: 75/255, blue: 90/255, alpha: 1)
+        cell.detailTextLabel?.font =  UIFont(name: "Arial-Regular", size: 17)
+        cell.textLabel?.textColor =  UIColor(red:0/255, green: 0/255, blue: 0/255, alpha: 1)
         cell.detailTextLabel?.textColor =  UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0)
         cell.detailTextLabel?.text = "5574260143"
         cell.backgroundColor = UIColor.white

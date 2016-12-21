@@ -23,6 +23,11 @@ class Agencia:  UIViewController,UITableViewDelegate,UITableViewDataSource{
         fila.img_logo.image = UIImage(named: "audi_logo")
         fila.agencia.text = "Audi Cuernavaca"
         
+        fila.img_logo.clipsToBounds = true;
+        fila.img_logo.layer.cornerRadius = 20
+        fila.img_logo.layer.borderColor = UIColor.black.cgColor
+        fila.img_logo.layer.borderWidth = 0.5
+        
         fila.btnSeguir.layer.cornerRadius =  5
         fila.btnSeguir.layer.borderColor =  UIColor.black.cgColor
         fila.btnSeguir.layer.borderWidth =  1
