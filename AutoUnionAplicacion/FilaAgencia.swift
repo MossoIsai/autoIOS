@@ -12,6 +12,6 @@ class FilaAgencia: UITableViewCell {
     @IBOutlet weak var img_logo: UIImageView!
     @IBOutlet weak var agencia: UILabel!
     @IBOutlet weak var btnSeguir: UIButton!
-    
+    @IBOutlet weak var direccion: UILabel!
     
 }

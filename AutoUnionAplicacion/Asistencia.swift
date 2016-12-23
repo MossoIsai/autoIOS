@@ -35,7 +35,6 @@ class Asistencia: UIViewController,UITableViewDelegate,UITableViewDataSource,MFM
         cell.textLabel?.textColor =  UIColor(red:0/255, green: 0/255, blue: 0/255, alpha: 1)
         cell.detailTextLabel?.textColor =  UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0)
         cell.detailTextLabel?.text = "5574260143"
-        cell.backgroundColor = UIColor.white
         
         return cell
     }

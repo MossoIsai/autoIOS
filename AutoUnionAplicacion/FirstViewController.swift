@@ -12,6 +12,8 @@ import FBSDKShareKit
 import Alamofire
 
 class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    /**Simulación*/
+    private var imagenesArray:[String] = ["mercedes","mazda_car","jetta","honda_car","bwm_deportivo","a1","q5","q7","hummer","q3","r8"]
     
     private let linkAuto: String =  "http://192.168.69.36:8080/autoUnion/pruebaGSON.jsp"
     var automovil:Automovil  = Automovil()
@@ -22,7 +24,6 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
-    
         automovil.anioGetYSet = 20
         let anio:Int =  automovil.anioGetYSet
         /** ::::::::::: LECTURA Y PARSEO DEL JSON ::::::::**/
@@ -47,17 +48,14 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
                 }
         }
         //print(":::::::::: SEGUNDA PETICIÓN::::::")
-        
         /**Alamofire.request(linkAuto).response{ response in
             debugPrint(response)
             print("Mensaje de la seguna petición")
         }**/
-        
-        
         /**:::::::::: FIN DE LA LECTURA Y PARSEO DEL JSON ::::::::*/
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 11
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -67,7 +65,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         fila.precio.text = "$ 1, 000, 000 M.N"
         fila.datosAuto.text = "Audi R8 Multitronic 2016"
         
-        let automovil: UIImage =  UIImage(named: "r8")!
+        let automovil: UIImage =  UIImage(named: imagenesArray[indexPath.row])!
         
         let corazon: UIImage =   UIImage(named: "corazon")!
         let empresa: UIImage =  UIImage(named: "audi_logo")!
@@ -77,6 +75,9 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         
         
         fila.logoEmpresa.image =  empresa
+        fila.logoEmpresa.contentMode = .scaleAspectFit
+        
+        
         fila.imgCorazon.image = corazon
         // Iconos redondeado de la empresa
         fila.logoEmpresa.clipsToBounds = true;
@@ -87,7 +88,6 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         //desactivar el select de uitableView
         fila.selectionStyle = UITableViewCellSelectionStyle.none
         //Estilo boton
-        fila.btnSeguir.layer.cornerRadius = 4
         return fila;
     }
     // ::::::::::::::: Controlador de alerta ::::::::::::::::
@@ -119,9 +119,9 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
             (alert: UIAlertAction!) -> Void in
             
             let twitterShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            twitterShare.add(UIImage(named: "q1_2"))
+            twitterShare.add(UIImage(named: "r8"))
             twitterShare.add(NSURL(string: "www.autounion.com") as! URL)
-            twitterShare.setInitialText("Audi A3 1.4 S-TRONIC 2016, $1,300,000.00 M.N")
+            twitterShare.setInitialText("R8 MULTI-TRONIC 2017, $2,800,000.00 M.N Publicación de pruebas")
             self.present(twitterShare, animated: true, completion: nil)
             
         })
@@ -136,11 +136,23 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         controladorAlerta.addAction(compartirTwitter)
         controladorAlerta.addAction(copiarURL)
         controladorAlerta.addAction(cancelar)
-        controladorAlerta.view.tintColor = UIColor.black
+        controladorAlerta.view.tintColor = UIColor(red: 40/255, green: 43/255, blue: 50/255, alpha: 1)
+
         
         self.present(controladorAlerta, animated: true, completion: nil)
         
     }
+    /**Ocultar la barra de estado del viewController*/
+    /*override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }*/
+   /**Fin*/
     
+    
+    
+    
+   
 }
 

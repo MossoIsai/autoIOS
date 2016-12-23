@@ -38,7 +38,7 @@ class Registro: UIViewController {
         if(telefono.text == ""){
             
             let mensajeAlerta = Alertas()
-            mensajeAlerta.showAlert(controller: self, titulo: "Ingresa tu número telefonico", mensaje: "El número de telefonico no es valido")
+            mensajeAlerta.showAlert(controller: self, titulo: "Ingresa tu número telefónico", mensaje: "El número de telefónico no es valido")
             
         }else{
             
@@ -116,13 +116,17 @@ class Registro: UIViewController {
         
         //lyendda de whatsapp
         
-        self.etiquetaWhatsapp.text = "Utilizar este número telefonico para la comunicación via whatsapp."
+        self.etiquetaWhatsapp.text = "Utilizar este número telefónico para la comunicación via whatsapp."
         
         self.etiquetaWhatsapp.lineBreakMode = NSLineBreakMode.byWordWrapping
         etiquetaWhatsapp.numberOfLines = 2
         //etiquetaWhatsapp.textAlignment = .center
         self.telefono.textAlignment = .center
+        telefono.attributedText = NSAttributedString(string: "Teléfono",
+                                                     attributes: [NSForegroundColorAttributeName: UIColor.yellow])
         self.email.textAlignment = .center
+        email.attributedText = NSAttributedString(string: "Correo",
+                                                     attributes: [NSForegroundColorAttributeName: UIColor.yellow])
         
         let buttonConfirmar = UIButton(type: .custom)
         buttonConfirmar.isSelected = true
@@ -146,15 +150,15 @@ class Registro: UIViewController {
         
         if(celular == ""){
            
-            mensajeAlerta.showAlert(controller: self, titulo: "Agregar un teléfono", mensaje: "Para poder seguir con el registro es necesario proporcinar un número telefonico")
+            mensajeAlerta.showAlert(controller: self, titulo: "Agregar un teléfono", mensaje: "Para poder seguir con el registro es necesario proporcinar un número telefónico")
             
         }else if((celular?.characters.count)! > 10){
             
-            mensajeAlerta.showAlert(controller: self, titulo: "Teléfono no valido", mensaje: "El número de telefonico no es valido")
+            mensajeAlerta.showAlert(controller: self, titulo: "Teléfono no valido", mensaje: "El número de telefónico no es valido")
             
         }else if((celular?.characters.count)! < 10){
             
-            mensajeAlerta.showAlert(controller: self, titulo: "Teléfono no valido", mensaje: "El número de telefonico no es valido")
+            mensajeAlerta.showAlert(controller: self, titulo: "Teléfono no valido", mensaje: "El número de telefónico no es valido")
         
         }
     }

@@ -22,9 +22,25 @@ class SMS: UIViewController{
     @IBOutlet weak var labelPassword: UILabel!
     @IBOutlet weak var btnSiguiente: UIButton!
     @IBAction func btnSiguiente(_ sender: Any) {
-      
-      let mensajeAlerta = Alertas()
-        mensajeAlerta.showAlert(controller: self, titulo: "Código de Activación", mensaje: "En breve recibiras un código de activación de 4 digitos por correo electrónico.")
+        let pass1 = password.text
+        let pass2 = confirmarPassword.text
+        let mensajeAlerta = Alertas()
+        
+        
+        if sms.text == ""{
+            mensajeAlerta.showAlert(controller: self, titulo: "Completar el campo nombre", mensaje: "Para poder seguir con el registro es necesario completar el campo nombre.")
+        }else if pass1 == ""{
+            mensajeAlerta.showAlert(controller: self, titulo: "Completar el campo contraseña", mensaje: "Para poder seguir con el registro es necesario completar el campo contraseña.")
+            
+        }else if pass2 == ""{
+            mensajeAlerta.showAlert(controller: self, titulo: "Completar el campo  verificar contraseña", mensaje: "Para poder seguir con el registro es necesario completar el campo de verificar contraseña.")
+        }else if pass1 != pass2 {
+            mensajeAlerta.showAlert(controller: self, titulo: "Verificar contraseña", mensaje: "La contraseña de confirmación es diferente.")
+        }
+        else{
+            
+            mensajeAlerta.showAlert(controller: self, titulo: "Código de Activación", mensaje: "En breve recibiras un código de activación de 4 digitos por correo electrónico.")
+        }
         
     }
     override func viewDidLoad() {
@@ -61,13 +77,13 @@ class SMS: UIViewController{
         vistaDown.layer.backgroundColor = UIColor.white.cgColor
         vistaDown.layer.borderColor = UIColor.gray.cgColor
         vistaDown.layer.borderWidth = 0.4
-
+        
         terminosCondiciones.text = "Al registrarte, aceptas nuestras Condiciones y la Politica de privacidad."
         
-       /* btnSiguiente.layer.backgroundColor = UIColor.clear.cgColor
-        btnSiguiente.layer.borderWidth = 1
-        btnSiguiente.layer.borderColor = UIColor.black.cgColor
-        btnSiguiente.layer.cornerRadius = 4*/
+        /* btnSiguiente.layer.backgroundColor = UIColor.clear.cgColor
+         btnSiguiente.layer.borderWidth = 1
+         btnSiguiente.layer.borderColor = UIColor.black.cgColor
+         btnSiguiente.layer.cornerRadius = 4*/
         btnSiguiente.backgroundColor =  UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1)
         btnSiguiente.layer.cornerRadius = 4
         btnSiguiente.layer.borderWidth = 1
@@ -81,24 +97,13 @@ class SMS: UIViewController{
         labelPassword.lineBreakMode = NSLineBreakMode.byCharWrapping
         labelPassword.numberOfLines = 2
         labelPassword.textAlignment = .left
-        
-        
-    terminosCondiciones.lineBreakMode = NSLineBreakMode.byCharWrapping
+        terminosCondiciones.lineBreakMode = NSLineBreakMode.byCharWrapping
         terminosCondiciones.numberOfLines = 2
         terminosCondiciones.textAlignment = .center
-        
-        
-    confirmarPassword.textAlignment = .center
-        
-        
+        confirmarPassword.textAlignment = .center
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
-    
-    
-    
     
 }

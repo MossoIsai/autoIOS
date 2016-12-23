@@ -23,14 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /*UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]*/
        /* UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 102/255, green: 65/255, blue: 88/255, alpha: 1.0)]*/
         // Title's text color
-       UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().barTintColor =  UIColor(red: 252/255, green: 192/255, blue: 60/255, alpha: 1)
+       //UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.white
+        //UINavigationBar.appearance().barTintColor =  UIColor(red: 235/255, green: 17/255, blue: 95/255, alpha: 1)
+         UINavigationBar.appearance().barTintColor =  UIColor(red: 40/255, green: 43/255, blue:50/255, alpha: 1)
+        
+        
 //UIColor(red: 44/255, green: 25/255, blue: 53/255, alpha: 1.0)
         /**Textos blanco en los encabezados*/
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+
         /**Barra de navegacion*/
         UITabBar.appearance().backgroundColor = UIColor.white
-        UITabBar.appearance().tintColor = UIColor.black
+        UITabBar.appearance().tintColor = UIColor(red: 40/255, green: 43/255, blue:50/255, alpha: 1)
+        
        return true
         
     }
@@ -68,6 +74,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+
+        
         
         return true
     }

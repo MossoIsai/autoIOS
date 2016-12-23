@@ -10,8 +10,6 @@ class FilaModelo: UITableViewCell{
     
     @IBOutlet weak var logoEmpresa: UIImageView!
     @IBOutlet weak var nombreAgencia: UILabel!
-    @IBOutlet weak var btnSeguir: UIButton!
-    @IBOutlet weak var imgMas: UIImageView!
     @IBOutlet weak var imgAuto: UIImageView!
     @IBOutlet weak var imgCorazon: UIImageView!
     @IBOutlet weak var datosAuto: UILabel!

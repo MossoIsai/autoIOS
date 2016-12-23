@@ -138,6 +138,7 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
         self.imgLogo.layer.borderWidth = 0.2
         self.imgLogo.layer.borderColor =  UIColor.black.cgColor
         self.imgLogo.clipsToBounds = true
+        self.imgLogo.contentMode = .scaleAspectFit
         
         /*describe la ubicación y el tamaño de la vista en el
          sistema de coordenadas de su superview.*/
