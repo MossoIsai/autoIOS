@@ -15,6 +15,13 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     /**Simulación*/
     private var imagenesArray:[String] = ["mercedes","mazda_car","jetta","honda_car","bwm_deportivo","a1","q5","q7","hummer","q3","r8"]
     
+    private var imagenesEmpresa:[String] = ["audi_logo","audi_logo","audi_logo","audi_logo","toyota","audi_logo","audi_logo",
+                                            "audi_logo","log_bmw","audi_logo","audi_logo"]
+    
+    
+    
+    private var nombreAuto = ["Mercedes C200 2017","Mazda CE 2016","Volkswagen Jetta 2017","Honda Civic 2017","BMW Premier One 2017","Audi A1 Stronic 2015","Audi Q7 Multitronic 2017","Audi Q5 Multitronic 2015","Hummer H2 2010","Audi Q3 Stronic 2016","Audi R8 Multitronic 2017"]
+    
     private let linkAuto: String =  "http://192.168.69.36:8080/autoUnion/pruebaGSON.jsp"
     var automovil:Automovil  = Automovil()
   /**Pone en blanclo los componenres de arriba*/
@@ -63,7 +70,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         
         fila.nombreAgencia.text = "Audi Cuernavaca"
         fila.precio.text = "$ 1, 000, 000 M.N"
-        fila.datosAuto.text = "Audi R8 Multitronic 2016"
+        fila.datosAuto.text = nombreAuto[indexPath.row]
         
         let automovil: UIImage =  UIImage(named: imagenesArray[indexPath.row])!
         
@@ -81,7 +88,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         fila.imgCorazon.image = corazon
         // Iconos redondeado de la empresa
         fila.logoEmpresa.clipsToBounds = true;
-        fila.logoEmpresa.layer.cornerRadius = 15
+        fila.logoEmpresa.layer.cornerRadius = 18
         fila.logoEmpresa.layer.borderColor = UIColor.black.cgColor
         fila.logoEmpresa.layer.borderWidth = 0.3
         fila.logoEmpresa.layer.shadowOffset = CGSize.zero
@@ -119,9 +126,9 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
             (alert: UIAlertAction!) -> Void in
             
             let twitterShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            twitterShare.add(UIImage(named: "r8"))
-            twitterShare.add(NSURL(string: "www.autounion.com") as! URL)
-            twitterShare.setInitialText("R8 MULTI-TRONIC 2017, $2,800,000.00 M.N Publicación de pruebas")
+           // twitterShare.add(UIImage(named: "r8"))
+           // twitterShare.add(NSURL(string: "www.autounion.com") as! URL)
+            twitterShare.setInitialText("#Gracias2016 por los momentos y quiero los boletos @juanenla99 ...\(self.randomNumber())")
             self.present(twitterShare, animated: true, completion: nil)
             
         })
@@ -150,6 +157,27 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     }*/
    /**Fin*/
     
+    /** Numero random
+     
+     let randomNum:UInt32 = arc4random_uniform(100) // range is 0 to 99
+     
+     // convert the UInt32 to some other  types
+     
+     let randomTime:TimeInterval = TimeInterval(randomNum)
+     
+     let someInt:Int = Int(randomNum)
+     
+     let someString:String = String(randomNum) //string works too
+     */
+    
+    func randomNumber()-> String {
+        let randomNum:UInt32 = arc4random_uniform(1000) // range is 0 to 99
+        let randomTime:TimeInterval = TimeInterval(randomNum)
+        let someInt:Int = Int(randomNum)
+        let someString:String = String(randomNum) //string works too
+         return someString
+    
+    }
     
     
     

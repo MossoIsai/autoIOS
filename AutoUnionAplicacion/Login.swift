@@ -60,10 +60,10 @@ func cargarVistas() {
     btnEnter.layer.backgroundColor = UIColor.clear.cgColor
     btnEnter.layer.cornerRadius = 4*/
     
-    self.btnEnter.backgroundColor =  UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1)
+    self.btnEnter.backgroundColor =  UIColor(red: 6/255, green: 52/255, blue:112/255, alpha: 1)
     self.btnEnter.layer.cornerRadius = 4
     self.btnEnter.layer.borderWidth = 1
-    self.btnEnter.layer.borderColor = UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1).cgColor
+    self.btnEnter.layer.borderColor =  UIColor(red: 6/255, green: 52/255, blue:112/255, alpha: 1).cgColor
     
     
     self.terminos_condiciones.text = "Al registrarte, aceptas nuestras Condiciones y la Politica de privacidad."

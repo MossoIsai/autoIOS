@@ -31,7 +31,15 @@ class Registro: UIViewController {
             cargarVistas()
     }
     @IBAction func btnSiguiente(_ sender: Any) {
+        let correo = self.email.text
          self.validarTelefono(textTelefono: telefono)
+        if self.validateEmail(texto: correo!) {
+            
+        }else{
+            
+            let mensajeAlerta = Alertas()
+            mensajeAlerta.showAlert(controller: self, titulo: "Correo invalido", mensaje: "Por favor, verifica tu correo electrónico")
+        }
     }
     @IBAction func btnCheck(_ sender: Any) {
         
@@ -103,10 +111,10 @@ class Registro: UIViewController {
         self.btnNextStyle.layer.cornerRadius = 4
         self.btnNextStyle.layer.borderColor = UIColor.black.cgColor
         self.btnNextStyle.layer.borderWidth = 1**/
-        self.btnNextStyle.backgroundColor =  UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1)
+        self.btnNextStyle.backgroundColor =  UIColor(red: 6/255, green: 52/255, blue:112/255, alpha: 1)
         self.btnNextStyle.layer.cornerRadius = 4
         self.btnNextStyle.layer.borderWidth = 1
-        self.btnNextStyle.layer.borderColor = UIColor(red: 255/255, green: 217/255, blue: 0/255, alpha: 1).cgColor
+        self.btnNextStyle.layer.borderColor = UIColor(red: 6/255, green: 52/255, blue:112/255, alpha: 1).cgColor
         
        // self.imagenFondo.image = UIImage(named: "car2")
         
@@ -122,11 +130,11 @@ class Registro: UIViewController {
         etiquetaWhatsapp.numberOfLines = 2
         //etiquetaWhatsapp.textAlignment = .center
         self.telefono.textAlignment = .center
-        telefono.attributedText = NSAttributedString(string: "Teléfono",
-                                                     attributes: [NSForegroundColorAttributeName: UIColor.yellow])
+        /*telefono.attributedText = NSAttributedString(string: "Teléfono",
+                                                     attributes: [NSForegroundColorAttributeName: UIColor.yellow])*/
         self.email.textAlignment = .center
-        email.attributedText = NSAttributedString(string: "Correo",
-                                                     attributes: [NSForegroundColorAttributeName: UIColor.yellow])
+        /*email.attributedText = NSAttributedString(string: "Correo",
+                                                     attributes: [NSForegroundColorAttributeName: UIColor.yellow])*/
         
         let buttonConfirmar = UIButton(type: .custom)
         buttonConfirmar.isSelected = true
@@ -159,7 +167,6 @@ class Registro: UIViewController {
         }else if((celular?.characters.count)! < 10){
             
             mensajeAlerta.showAlert(controller: self, titulo: "Teléfono no valido", mensaje: "El número de telefónico no es valido")
-        
         }
     }
     
@@ -167,6 +174,15 @@ class Registro: UIViewController {
         self.view.endEditing(true)
     }
     
+    func validateEmail(texto:String) -> Bool{
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
+        return emailTest.evaluate(with: texto)
+        
+    }
     /*func playVideo() {
         
        /* let videoView = UIView(frame: CGRect(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.frame.width, self.view.frame.height))*/
@@ -188,8 +204,4 @@ class Registro: UIViewController {
         
         self.view.addSubview(videoView)
     }*/
-    
-    
-    
-    
 }

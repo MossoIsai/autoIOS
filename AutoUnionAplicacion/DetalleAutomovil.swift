@@ -11,7 +11,7 @@ import FBSDKShareKit
 import Social
 
 class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
-    
+    @IBOutlet weak var scroll: UIScrollView!
     //vinculación de los elementos de storyBoard y el codigo
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControll: UIPageControl!
@@ -129,6 +129,8 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
     }
     override func viewDidLoad() {
         
+        cargarVistas()
+        
         self.btnSeguir.layer.cornerRadius = 5
         self.btnSeguir.layer.borderColor = UIColor.black.cgColor
         self.btnSeguir.layer.borderWidth = 1
@@ -223,6 +225,8 @@ class DetalleAutomovil: UIViewController,UIScrollViewDelegate{
       cargar vistas de Inicio
       ------------------------ */
     func cargarVistas(){
+        
+        scroll.contentSize = CGSize(width: 200, height: 2300)
         
     }
 }
