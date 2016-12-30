@@ -30,6 +30,8 @@
 		78A4DE361DF73DCB008AE70B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A4DE351DF73DCB008AE70B /* Bolts.framework */; };
 		78AFD2571DDB6ADE0066B830 /* DetalleUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */; };
 		78B5CF3C1DFF644E00FF4C6F /* Automovil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5CF3B1DFF644E00FF4C6F /* Automovil.swift */; };
+		78B7722A1E1567B3008E525F /* FilaGerenteAutos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B772291E1567B3008E525F /* FilaGerenteAutos.swift */; };
+		78B7722C1E1569C2008E525F /* AlmacenGerente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7722B1E1569C2008E525F /* AlmacenGerente.swift */; };
 		78DCDA421E0DF1F80093BBA0 /* Favoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */; };
 		78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */; };
 		78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8E1DF2171000F1B21F /* Agencia.swift */; };
@@ -63,7 +65,6 @@
 		534C6D213AEE6B922E05B960 /* Pods-AutoUnionAplicacionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacionTests/Pods-AutoUnionAplicacionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B1962C956E9DA36E23D2E77 /* Pods-AutoUnionAplicacionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoUnionAplicacionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoUnionAplicacionUITests/Pods-AutoUnionAplicacionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		781747751E09B39700B4BFFF /* exo_font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = exo_font.otf; sourceTree = "<group>"; };
-		781747761E09B39700B4BFFF /* libre2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = libre2.ttf; sourceTree = "<group>"; };
 		781782E61DDA1B4000A2570E /* AutoUnionAplicacion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoUnionAplicacion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781782E91DDA1B4000A2570E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		781782EB1DDA1B4000A2570E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +93,8 @@
 		78A4DE351DF73DCB008AE70B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleUsuario.swift; sourceTree = "<group>"; };
 		78B5CF3B1DFF644E00FF4C6F /* Automovil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Automovil.swift; sourceTree = "<group>"; };
+		78B772291E1567B3008E525F /* FilaGerenteAutos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaGerenteAutos.swift; sourceTree = "<group>"; };
+		78B7722B1E1569C2008E525F /* AlmacenGerente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlmacenGerente.swift; sourceTree = "<group>"; };
 		78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favoritos.swift; sourceTree = "<group>"; };
 		78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaAgencia.swift; sourceTree = "<group>"; };
 		78E73E8E1DF2171000F1B21F /* Agencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agencia.swift; sourceTree = "<group>"; };
@@ -229,10 +232,12 @@
 			children = (
 				78E73E8E1DF2171000F1B21F /* Agencia.swift */,
 				78ECB73A1DF5CD25008AED57 /* Asistencia.swift */,
+				78B7722B1E1569C2008E525F /* AlmacenGerente.swift */,
 				781782ED1DDA1B4000A2570E /* Buscar.swift */,
 				7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */,
 				78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */,
 				78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */,
+				78B772291E1567B3008E525F /* FilaGerenteAutos.swift */,
 				781783191DDA23EB00A2570E /* FilaModelo.swift */,
 				781782EB1DDA1B4000A2570E /* FirstViewController.swift */,
 				78FB88B41E01A4AC00D40FA9 /* Registro.swift */,
@@ -248,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				781747751E09B39700B4BFFF /* exo_font.otf */,
-				781747761E09B39700B4BFFF /* libre2.ttf */,
 			);
 			name = Ressources;
 			sourceTree = "<group>";
@@ -556,7 +560,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */,
+				78B7722C1E1569C2008E525F /* AlmacenGerente.swift in Sources */,
 				78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */,
+				78B7722A1E1567B3008E525F /* FilaGerenteAutos.swift in Sources */,
 				781782EE1DDA1B4000A2570E /* Buscar.swift in Sources */,
 				7817831C1DDA48B900A2570E /* DetalleAutomovil.swift in Sources */,
 				78FBAA3B1E08328600F7A516 /* Alertas.swift in Sources */,
