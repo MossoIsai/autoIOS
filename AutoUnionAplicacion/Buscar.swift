@@ -47,7 +47,6 @@
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            
             //Asigno el delegado a los textField
             self.marca.delegate = self
             self.modelo.delegate = self

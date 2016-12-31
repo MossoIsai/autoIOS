@@ -21,6 +21,8 @@ class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cargarVistas()
+        
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +43,12 @@ class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate
         fila.imageCar.contentMode = .scaleAspectFit
         fila.imageCar.layer.cornerRadius = 10
         fila.imageDownPrice.image =  UIImage(named: "down_price")
+        fila.labelDias.text =  String(diasSemaforo[indexPath.row])
+        
+        if vendidoStatus[indexPath.row] == 0{
+            fila.labelVendido.isHidden = true
+        }
+        
         
         if diasSemaforo[indexPath.row] <= 44 {
             fila.semaforoDias.image = UIImage(named: "circle_green")
@@ -50,13 +58,9 @@ class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate
             fila.semaforoDias.image = UIImage(named: "circle_red")
         }
         fila.imageDownPrice.isHidden = true
-        
-        if vendidoStatus[indexPath.row] == 0{
-         fila.labelVendido.isHidden = true
-        }
-        
-        
-        
+        print(vendidoStatus[indexPath.row])
+
+       
         
         return fila
         
@@ -68,6 +72,17 @@ class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         
+    }
+    /**Metodo que carga la vista**/
+    func cargarVistas() {
+        let tabArray = self.tabBarController?.tabBar.items as NSArray!
+        let tabItem = tabArray?.object(at: 0) as! UITabBarItem
+        tabItem.badgeValue = "\(titulo.count)"
+        /*if #available(iOS 10.0, *) {
+            tabItem.badgeColor = UIColor(red: 0/255, green: 194/255, blue: 59/255, alpha: 1)
+        } else {
+            // Fallback on earlier versions
+        }*/
     }
     
 }

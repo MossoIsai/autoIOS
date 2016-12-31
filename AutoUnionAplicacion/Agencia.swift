@@ -63,7 +63,7 @@ class Agencia:  UIViewController,UITableViewDelegate,UITableViewDataSource,UISea
         searchController.searchBar.isTranslucent = true
         searchController.searchBar.placeholder = "Buscar"
         //searchController.searchBar.searchBarStyle = .default
-        searchController.searchBar.tintColor = UIColor.orange
+        //searchController.searchBar.tintColor = UIColor.orange
         searchController.searchBar.searchBarStyle = .minimal
         tabla.tableHeaderView = searchController.searchBar
         
