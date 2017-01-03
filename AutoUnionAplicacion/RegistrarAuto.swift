@@ -226,10 +226,6 @@ UIPickerViewDataSource{
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == pickerTransmision {
-        
-            return transmisionArray.count
-        }
         return 0
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

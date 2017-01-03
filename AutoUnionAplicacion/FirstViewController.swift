@@ -12,6 +12,13 @@ import FBSDKShareKit
 import Alamofire
 
 class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    /**::::::::::::: PRUEBA DE DICCIONARIO  :::::::::::::::*/
+    var diccionario = [String : String]()
+    var arreglo = [Int]()
+    
+    
+    
+    
     /**Simulación*/
     private var imagenesArray:[String] = ["mercedes","mazda_car","jetta","honda_car","bwm_deportivo","a1","q5","q7","hummer","q3","r8"]
     
@@ -30,36 +37,14 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.statusBarStyle = .lightContent
-        automovil.anioGetYSet = 20
-        let anio:Int =  automovil.anioGetYSet
-        /** ::::::::::: LECTURA Y PARSEO DEL JSON ::::::::**/
-        let parameters: Parameters = ["foo": "bar"]
-        //reauest("urlConecction",metodo(.post/.get),paramtetros,codificaciónJSON)
-        Alamofire.request(linkAuto, method: .get, parameters: parameters, encoding: JSONEncoding.default)
-            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
-                print("Progress: \(progress.fractionCompleted)")
-            }
-            .validate { request, response, data in
+        
+        diccionario = ["IGM":"ISA GARCIA MOSO","AGM":"ALEJANDRO GARCIA MOSO","RGM":"RAUL GARCIA MOSO"]
+        
+        print(diccionario["IGM"]!)
+        
+        cargarVistas()
 
-                // El cierre de la evaluación personalizada ahora incluye datos (le permite analizar datos para extraer mensajes de error si es necesario)
-                return .success
-            }
-            .responseJSON {
-                response in
-                debugPrint(response)
-                if let result = response.result.value {
-                    let JSON = result as! NSArray
-                    var tamano =  JSON.count
-                    print("Tamaño\( JSON.value(forKey: "locNombre"))")
-                }
-        }
-        //print(":::::::::: SEGUNDA PETICIÓN::::::")
-        /**Alamofire.request(linkAuto).response{ response in
-            debugPrint(response)
-            print("Mensaje de la seguna petición")
-        }**/
-        /**:::::::::: FIN DE LA LECTURA Y PARSEO DEL JSON ::::::::*/
+       
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 11
@@ -177,6 +162,40 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         let someString:String = String(randomNum) //string works too
          return someString
     
+    }
+    func cargarVistas(){
+        //cambiando de color la barra de estado
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        /** ::::::::::: LECTURA Y PARSEO DEL JSON ::::::::**/
+        let parameters: Parameters = ["foo": "bar"]
+        //reauest("urlConecction",metodo(.post/.get),paramtetros,codificaciónJSON)
+        Alamofire.request(linkAuto, method: .get, parameters: parameters, encoding: JSONEncoding.default)
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                print("Progress: \(progress.fractionCompleted)")
+            }
+            .validate { request, response, data in
+                
+                // El cierre de la evaluación personalizada ahora incluye datos (le permite analizar datos para extraer mensajes de error si es necesario)
+                return .success
+            }
+            .responseJSON {
+                response in
+                debugPrint(response)
+                if let result = response.result.value {
+                    let JSON = result as! NSArray
+                    //let JSON2 = result as! NSDictionary
+                    var tamano =  JSON.count
+                    //print(JSON2)
+                    print("Tamaño\( JSON.value(forKey: "locNombre"))")
+                }
+        }
+        //print(":::::::::: SEGUNDA PETICIÓN::::::")
+        /**Alamofire.request(linkAuto).response{ response in
+         debugPrint(response)
+         print("Mensaje de la seguna petición")
+         }**/
+        /**:::::::::: FIN DE LA LECTURA Y PARSEO DEL JSON ::::::::*/
     }
    
     
