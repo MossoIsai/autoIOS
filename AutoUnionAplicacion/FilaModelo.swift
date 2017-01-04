@@ -15,6 +15,8 @@ class FilaModelo: UITableViewCell{
     @IBOutlet weak var datosAuto: UILabel!
     @IBOutlet weak var precio: UILabel!
     
+    
+
     @IBAction func btnSegue(_ sender: Any) {
         print("siguiente modelo")
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)

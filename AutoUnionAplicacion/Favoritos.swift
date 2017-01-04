@@ -11,12 +11,12 @@ import UIKit
 
 class Favoritos:UIViewController {
     
-    @IBOutlet weak var scroll: UIScrollView!
+    //@IBOutlet weak var scroll: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        scroll.contentSize =  CGSize(width: self.view.frame.width, height: 2400)
+       // scroll.contentSize =  CGSize(width: self.view.frame.width, height: 2400)
         
     }
     

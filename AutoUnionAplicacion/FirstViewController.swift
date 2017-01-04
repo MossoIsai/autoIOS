@@ -16,9 +16,10 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     var diccionario = [String : String]()
     var arreglo = [Int]()
     
+    @IBOutlet weak var contenidoVistas: UIView!
     
     
-    
+
     /**Simulación*/
     private var imagenesArray:[String] = ["mercedes","mazda_car","jetta","honda_car","bwm_deportivo","a1","q5","q7","hummer","q3","r8"]
     
@@ -44,7 +45,6 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         
         cargarVistas()
 
-       
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 11
@@ -80,6 +80,17 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         //desactivar el select de uitableView
         fila.selectionStyle = UITableViewCellSelectionStyle.none
         //Estilo boton
+        
+        //estilo cardView
+    
+        
+        //fila.cardView.backgroundColor =  UIColor.white
+        
+        
+        
+        
+        
+        
         return fila;
     }
     // ::::::::::::::: Controlador de alerta ::::::::::::::::
@@ -154,7 +165,6 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
      
      let someString:String = String(randomNum) //string works too
      */
-    
     func randomNumber()-> String {
         let randomNum:UInt32 = arc4random_uniform(1000) // range is 0 to 99
         let randomTime:TimeInterval = TimeInterval(randomNum)

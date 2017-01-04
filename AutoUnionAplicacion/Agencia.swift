@@ -38,7 +38,7 @@ class Agencia:  UIViewController,UITableViewDelegate,UITableViewDataSource,UISea
         
         fila.img_logo.clipsToBounds = true;
         fila.img_logo.layer.cornerRadius = 20
-        fila.img_logo.layer.borderColor = UIColor.black.cgColor
+        fila.img_logo.layer.borderColor = UIColor.white.cgColor
         fila.img_logo.layer.borderWidth = 0.5
         
         fila.btnSeguir.layer.cornerRadius =  5
@@ -48,6 +48,7 @@ class Agencia:  UIViewController,UITableViewDelegate,UITableViewDataSource,UISea
         
         fila.direccion.lineBreakMode = NSLineBreakMode.byWordWrapping
         fila.direccion.numberOfLines = 2
+        fila.selectionStyle = UITableViewCellSelectionStyle.none
         
         return fila;
     }

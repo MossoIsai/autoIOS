@@ -73,6 +73,7 @@ class Asistencia: UIViewController,UITableViewDelegate,UITableViewDataSource,MFM
             contactos.contactType = .organization
             contactos.organizationName =  "BMW"
             contactos.jobTitle =  "Agencia"
+            
             contactos.note =  "Agencia agregada por la aplicación de Auto Union"
             contactos.imageData = UIImagePNGRepresentation(UIImage(named: "bmw_log")!)
             
@@ -87,7 +88,7 @@ class Asistencia: UIViewController,UITableViewDelegate,UITableViewDataSource,MFM
             
             
             let controller = CNContactViewController(forNewContact: contactos)
-            self.navigationController?.pushViewController(controller, animated: true)
+            self.navigationController?.pushViewController(controller, animated:true)
             
             
         })
