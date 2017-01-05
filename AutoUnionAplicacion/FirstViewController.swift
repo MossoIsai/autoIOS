@@ -37,13 +37,16 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
        return .lightContent
     }
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
-        
         diccionario = ["IGM":"ISA GARCIA MOSO","AGM":"ALEJANDRO GARCIA MOSO","RGM":"RAUL GARCIA MOSO"]
-        
         print(diccionario["IGM"]!)
-        
         cargarVistas()
+        
+        self.tabBarController?.tabBar.barTintColor =  UIColor.white
+
+
 
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,16 +62,14 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         
         let automovil: UIImage =  UIImage(named: imagenesArray[indexPath.row])!
         
-        let corazon: UIImage =   UIImage(named: "corazon")!
-        let empresa: UIImage =  UIImage(named: "audi_logo")!
+        let corazon: UIImage =   UIImage(named: "corazonItem2")!
+        let empresa: UIImage =  UIImage(named: "bmw_log")!
         fila.imgAuto.image = automovil
         fila.imgAuto.clipsToBounds = true
         fila.imgAuto.contentMode = .scaleAspectFit
         
-        
         fila.logoEmpresa.image =  empresa
         fila.logoEmpresa.contentMode = .scaleAspectFit
-        
         
         fila.imgCorazon.image = corazon
         // Iconos redondeado de la empresa
@@ -80,17 +81,8 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         //desactivar el select de uitableView
         fila.selectionStyle = UITableViewCellSelectionStyle.none
         //Estilo boton
-        
         //estilo cardView
-    
-        
         //fila.cardView.backgroundColor =  UIColor.white
-        
-        
-        
-        
-        
-        
         return fila;
     }
     // ::::::::::::::: Controlador de alerta ::::::::::::::::
@@ -175,8 +167,8 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     }
     func cargarVistas(){
         //cambiando de color la barra de estado
-        UIApplication.shared.statusBarStyle = .lightContent
-        
+        //UIApplication.shared.statusBarStyle = .lightContent
+        UIApplication.shared.statusBarStyle = .default
         /** ::::::::::: LECTURA Y PARSEO DEL JSON ::::::::**/
         let parameters: Parameters = ["foo": "bar"]
         //reauest("urlConecction",metodo(.post/.get),paramtetros,codificaciónJSON)

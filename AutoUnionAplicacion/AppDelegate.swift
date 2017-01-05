@@ -22,16 +22,16 @@
         /* UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 102/255, green: 65/255, blue: 88/255, alpha: 1.0)]*/
         // Title's text color
         //UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.black
         //UINavigationBar.appearance().barTintColor =  UIColor(red: 235/255, green: 17/255, blue: 95/255, alpha: 1)
-        UINavigationBar.appearance().barTintColor =  UIColor(red: 40/255, green: 43/255, blue: 50/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor =  UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         
         //UIColor(red: 44/255, green: 25/255, blue: 53/255, alpha: 1.0)
         /**Textos blanco en los encabezados*/
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
         /**Barra de navegacion*/
-        UITabBar.appearance().backgroundColor = UIColor.white
-        UITabBar.appearance().tintColor =   UIColor(red: 40/255, green: 43/255, blue: 50/255, alpha: 1)
+        UITabBar.appearance().isOpaque = true
+        UITabBar.appearance().tintColor =   UIColor.black
         return true
         
     }
