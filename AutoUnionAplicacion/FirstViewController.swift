@@ -84,8 +84,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         //estilo cardView
         //fila.cardView.backgroundColor =  UIColor.white
         print("IDENTIDICADOR -->\(indexPath.row)")
-
-
+        
         return fila;
     }
     // ::::::::::::::: Controlador de alerta ::::::::::::::::
@@ -119,6 +118,8 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         })
         /**Agregando imagen al AlertView*/
         compartirFacebook.setValue(UIImage(named: "facebook"), forKey: "image")
+        //compartirFacebook.setValue(UIColor.green, forKey: "titleTextColor")
+        
         //:::::::::::::::::::::: Facebook Message ::::::::::::::::::::::::::
         let compartirFaceMessage = UIAlertAction(title: "Messenger", style: .default, handler: {
             (alert: UIAlertAction) -> Void in
