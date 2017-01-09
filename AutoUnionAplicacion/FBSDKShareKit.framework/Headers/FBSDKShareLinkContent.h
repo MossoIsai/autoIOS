@@ -39,20 +39,17 @@
  @return The link title
  */
 @property (nonatomic, copy) NSString *contentTitle;
-
 /*!
  @abstract The URL of a picture to attach to this content.
  @return The network URL of an image
  */
 @property (nonatomic, copy) NSURL *imageURL;
-
 /*!
  @abstract Some quote text of the link.
  @discussion If specified, the quote text will render with custom styling on top of the link.
  @return The quote text of a link
  */
 @property (nonatomic, copy) NSString *quote;
-
 /*!
  @abstract Compares the receiver to another link content.
  @param content The other content

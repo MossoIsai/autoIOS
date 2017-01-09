@@ -83,6 +83,9 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         //Estilo boton
         //estilo cardView
         //fila.cardView.backgroundColor =  UIColor.white
+        print("IDENTIDICADOR -->\(indexPath.row)")
+
+
         return fila;
     }
     // ::::::::::::::: Controlador de alerta ::::::::::::::::
@@ -96,19 +99,40 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         let compartirFacebook =  UIAlertAction(title: "Compartir en Facebook", style: UIAlertActionStyle.default, handler: {
             (alert: UIAlertAction!) -> Void in
             
-            let fbContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
+           let fbContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
             
-            fbContent.contentURL = NSURL(string: "http://www.autounion.com") as URL!
-            fbContent.contentTitle =  "Estupido de conocimiento"
+            
+            
+            fbContent.contentURL = NSURL(string: "http://www.audiusedcarcenter.com") as URL!
+            fbContent.contentTitle =  "Publicacion desde el iphone de pruebas"
             fbContent.contentDescription = "Descripción del mensaje"
-            //fbContent.hashtag = FBSDKHashtag(string: "Developer")
-            //fbContent.contentDescription = "dedejdedediejidj idejdiejd"
-            //fbContent.contentTitle = "Titulo del compartir"
+            fbContent.quote = "Audi R8 Multitronic 2017"
             //fbContent.imageURL =  URL(string: "https://raw.github.com/fbsamples/ios-3.x-howtos/master/Images/iossdk_logo.png")!
-            FBSDKShareDialog.show(from: self, with: fbContent, delegate: nil)
+            let dialog = FBSDKShareDialog()
+            dialog.fromViewController = self
+            dialog.shareContent = fbContent
+            dialog.mode = .shareSheet
+            dialog.show()
+            
+            //FBSDKShareDialog.show(from: self, with: fbContent, delegate: nil)
             
         })
+        /**Agregando imagen al AlertView*/
         compartirFacebook.setValue(UIImage(named: "facebook"), forKey: "image")
+        //:::::::::::::::::::::: Facebook Message ::::::::::::::::::::::::::
+        let compartirFaceMessage = UIAlertAction(title: "Messenger", style: .default, handler: {
+            (alert: UIAlertAction) -> Void in
+            
+           let messageFaceMessage = FBSDKMessageDialog()
+            let fbContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
+            fbContent.contentURL = NSURL(string: "http://www.audiusedcarcenter.com") as URL!
+            fbContent.contentTitle =  "Publicacion desde el iphone de pruebas"
+            fbContent.contentDescription = "Descripción del mensaje"
+            fbContent.quote = "Audi R8 Multitronic 2017"
+            messageFaceMessage.shareContent = fbContent
+            messageFaceMessage.show()
+    
+        })
         //:::::::::::::::::::::: Twitter ::::::::::::::::::::::::::
         let compartirTwitter  =  UIAlertAction(title: "Compartir en Twitter", style: UIAlertActionStyle.default, handler: {
             (alert: UIAlertAction!) -> Void in
@@ -120,6 +144,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
             self.present(twitterShare, animated: true, completion: nil)
             
         })
+        
         compartirTwitter.setValue(UIImage(named: "twitter"), forKey: "image")
         
         let copiarURL = UIAlertAction(title: "Copiar URL", style: UIAlertActionStyle.default, handler: nil)
@@ -128,6 +153,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         let cancelar =  UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel, handler:nil)
         
         controladorAlerta.addAction(compartirFacebook)
+        //controladorAlerta.addAction(compartirFaceMessage)
         controladorAlerta.addAction(compartirTwitter)
         controladorAlerta.addAction(copiarURL)
         controladorAlerta.addAction(cancelar)

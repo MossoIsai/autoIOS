@@ -32,9 +32,12 @@
 		78B5CF3C1DFF644E00FF4C6F /* Automovil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5CF3B1DFF644E00FF4C6F /* Automovil.swift */; };
 		78B7722A1E1567B3008E525F /* FilaGerenteAutos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B772291E1567B3008E525F /* FilaGerenteAutos.swift */; };
 		78B7722C1E1569C2008E525F /* AlmacenGerente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7722B1E1569C2008E525F /* AlmacenGerente.swift */; };
+		78BD4B1F1E20632D00B0255B /* FilaDetalleAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */; };
+		78C082881E1F0DB1005944B9 /* DetalleAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C082871E1F0DB1005944B9 /* DetalleAgencia.swift */; };
 		78DCDA421E0DF1F80093BBA0 /* Favoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */; };
 		78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */; };
 		78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8E1DF2171000F1B21F /* Agencia.swift */; };
+		78E98DB81E20266700F3767B /* DetalleAuto2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E98DB71E20266700F3767B /* DetalleAuto2.swift */; };
 		78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECB73A1DF5CD25008AED57 /* Asistencia.swift */; };
 		78F16F6E1E16BEF200502913 /* RegistrarAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F16F6D1E16BEF100502913 /* RegistrarAuto.swift */; };
 		78FA94F51E03624A004AE8F4 /* SMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA94F41E03624A004AE8F4 /* SMS.swift */; };
@@ -96,9 +99,12 @@
 		78B5CF3B1DFF644E00FF4C6F /* Automovil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Automovil.swift; sourceTree = "<group>"; };
 		78B772291E1567B3008E525F /* FilaGerenteAutos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaGerenteAutos.swift; sourceTree = "<group>"; };
 		78B7722B1E1569C2008E525F /* AlmacenGerente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlmacenGerente.swift; sourceTree = "<group>"; };
+		78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaDetalleAuto.swift; sourceTree = "<group>"; };
+		78C082871E1F0DB1005944B9 /* DetalleAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAgencia.swift; sourceTree = "<group>"; };
 		78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favoritos.swift; sourceTree = "<group>"; };
 		78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaAgencia.swift; sourceTree = "<group>"; };
 		78E73E8E1DF2171000F1B21F /* Agencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agencia.swift; sourceTree = "<group>"; };
+		78E98DB71E20266700F3767B /* DetalleAuto2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAuto2.swift; sourceTree = "<group>"; };
 		78ECB73A1DF5CD25008AED57 /* Asistencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asistencia.swift; sourceTree = "<group>"; };
 		78F16F6D1E16BEF100502913 /* RegistrarAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrarAuto.swift; sourceTree = "<group>"; };
 		78FA94F41E03624A004AE8F4 /* SMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMS.swift; sourceTree = "<group>"; };
@@ -236,6 +242,7 @@
 				78ECB73A1DF5CD25008AED57 /* Asistencia.swift */,
 				78B7722B1E1569C2008E525F /* AlmacenGerente.swift */,
 				781782ED1DDA1B4000A2570E /* Buscar.swift */,
+				78C082871E1F0DB1005944B9 /* DetalleAgencia.swift */,
 				7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */,
 				78AFD2561DDB6ADE0066B830 /* DetalleUsuario.swift */,
 				78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */,
@@ -248,6 +255,8 @@
 				789536F51E1331FA00A2252D /* RecuperarPassword.swift */,
 				78F16F6D1E16BEF100502913 /* RegistrarAuto.swift */,
 				78FA94F41E03624A004AE8F4 /* SMS.swift */,
+				78E98DB71E20266700F3767B /* DetalleAuto2.swift */,
+				78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -574,9 +583,12 @@
 				781782EC1DDA1B4000A2570E /* FirstViewController.swift in Sources */,
 				78FA94F51E03624A004AE8F4 /* SMS.swift in Sources */,
 				78B5CF3C1DFF644E00FF4C6F /* Automovil.swift in Sources */,
+				78C082881E1F0DB1005944B9 /* DetalleAgencia.swift in Sources */,
 				78DCDA421E0DF1F80093BBA0 /* Favoritos.swift in Sources */,
 				78276E001E0320D40037EF0D /* Login.swift in Sources */,
 				78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */,
+				78BD4B1F1E20632D00B0255B /* FilaDetalleAuto.swift in Sources */,
+				78E98DB81E20266700F3767B /* DetalleAuto2.swift in Sources */,
 				78FB88B51E01A4AD00D40FA9 /* Registro.swift in Sources */,
 				78AFD2571DDB6ADE0066B830 /* DetalleUsuario.swift in Sources */,
 				7817831A1DDA23EB00A2570E /* FilaModelo.swift in Sources */,

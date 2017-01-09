@@ -59,11 +59,8 @@ class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate
         }
         fila.imageDownPrice.isHidden = true
         print(vendidoStatus[indexPath.row])
-
-       
         
         return fila
-        
         
     }
     

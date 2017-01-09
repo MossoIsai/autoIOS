@@ -15,6 +15,9 @@
  class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    let theme = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
+    let themeColorGray =  UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
+
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //Color del texto del background
@@ -24,7 +27,7 @@
         //UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().tintColor = UIColor.black
         //UINavigationBar.appearance().barTintColor =  UIColor(red: 235/255, green: 17/255, blue: 95/255, alpha: 1)
-        UINavigationBar.appearance().barTintColor =  UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor =  themeColorGray /*UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)*/
         
         //UIColor(red: 44/255, green: 25/255, blue: 53/255, alpha: 1.0)
         /**Textos blanco en los encabezados*/
