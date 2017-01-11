@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import MapKit
+
 class FilaDetalleAuto: UITableViewCell {
     
     
@@ -36,7 +38,8 @@ class FilaDetalleAuto: UITableViewCell {
     @IBOutlet weak var automatica: UILabel!
     @IBOutlet weak var kilometraje: UILabel!
     @IBOutlet weak var descripcion: UILabel!
-    
+    @IBOutlet weak var mapa: MKMapView!
+    @IBOutlet weak var btnContactarme: UIButton!
     
     
     

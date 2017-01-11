@@ -18,10 +18,10 @@
 		7817830C1DDA1B4100A2570E /* AutoUnionAplicacionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7817830B1DDA1B4100A2570E /* AutoUnionAplicacionUITests.swift */; };
 		7817831A1DDA23EB00A2570E /* FilaModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781783191DDA23EB00A2570E /* FilaModelo.swift */; };
 		7817831C1DDA48B900A2570E /* DetalleAutomovil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */; };
-		78276DFE1E02FDF80037EF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78276DFD1E02FDF80037EF0D /* Main.storyboard */; };
 		78276E001E0320D40037EF0D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78276DFF1E0320D40037EF0D /* Login.swift */; };
 		78363DEB1E005AF8006135B9 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78363DEA1E005AF8006135B9 /* Usuario.swift */; };
 		78363DEE1E008393006135B9 /* AgenciaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78363DED1E008393006135B9 /* AgenciaModel.swift */; };
+		787A2F351E246956008F7CE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787A2F341E246956008F7CE8 /* Main.storyboard */; };
 		789536F61E1331FA00A2252D /* RecuperarPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789536F51E1331FA00A2252D /* RecuperarPassword.swift */; };
 		789E7E0F1DF63273003B5E23 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E7E0B1DF63273003B5E23 /* FBSDKCoreKit.framework */; };
 		789E7E101DF63273003B5E23 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E7E0C1DF63273003B5E23 /* FBSDKLoginKit.framework */; };
@@ -32,9 +32,11 @@
 		78B5CF3C1DFF644E00FF4C6F /* Automovil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5CF3B1DFF644E00FF4C6F /* Automovil.swift */; };
 		78B7722A1E1567B3008E525F /* FilaGerenteAutos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B772291E1567B3008E525F /* FilaGerenteAutos.swift */; };
 		78B7722C1E1569C2008E525F /* AlmacenGerente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7722B1E1569C2008E525F /* AlmacenGerente.swift */; };
+		78B970141E2559A0007715AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B970131E2559A0007715AC /* MapKit.framework */; };
 		78BD4B1F1E20632D00B0255B /* FilaDetalleAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */; };
 		78C082881E1F0DB1005944B9 /* DetalleAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C082871E1F0DB1005944B9 /* DetalleAgencia.swift */; };
 		78DCDA421E0DF1F80093BBA0 /* Favoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */; };
+		78E3A15E1E245A45002FA154 /* Mapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3A15D1E245A45002FA154 /* Mapa.swift */; };
 		78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */; };
 		78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8E1DF2171000F1B21F /* Agencia.swift */; };
 		78E98DB81E20266700F3767B /* DetalleAuto2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E98DB71E20266700F3767B /* DetalleAuto2.swift */; };
@@ -84,11 +86,11 @@
 		7817830D1DDA1B4100A2570E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		781783191DDA23EB00A2570E /* FilaModelo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaModelo.swift; sourceTree = "<group>"; };
 		7817831B1DDA48B900A2570E /* DetalleAutomovil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAutomovil.swift; sourceTree = "<group>"; };
-		78276DFD1E02FDF80037EF0D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		78276DFF1E0320D40037EF0D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		78363DEA1E005AF8006135B9 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		78363DED1E008393006135B9 /* AgenciaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgenciaModel.swift; sourceTree = "<group>"; };
 		785B8A031E01D4BF00C5A231 /* video_auto.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_auto.mp4; sourceTree = "<group>"; };
+		787A2F341E246956008F7CE8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		789536F51E1331FA00A2252D /* RecuperarPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecuperarPassword.swift; sourceTree = "<group>"; };
 		789E7E0B1DF63273003B5E23 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		789E7E0C1DF63273003B5E23 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -99,9 +101,11 @@
 		78B5CF3B1DFF644E00FF4C6F /* Automovil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Automovil.swift; sourceTree = "<group>"; };
 		78B772291E1567B3008E525F /* FilaGerenteAutos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaGerenteAutos.swift; sourceTree = "<group>"; };
 		78B7722B1E1569C2008E525F /* AlmacenGerente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlmacenGerente.swift; sourceTree = "<group>"; };
+		78B970131E2559A0007715AC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaDetalleAuto.swift; sourceTree = "<group>"; };
 		78C082871E1F0DB1005944B9 /* DetalleAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAgencia.swift; sourceTree = "<group>"; };
 		78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favoritos.swift; sourceTree = "<group>"; };
+		78E3A15D1E245A45002FA154 /* Mapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapa.swift; sourceTree = "<group>"; };
 		78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaAgencia.swift; sourceTree = "<group>"; };
 		78E73E8E1DF2171000F1B21F /* Agencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agencia.swift; sourceTree = "<group>"; };
 		78E98DB71E20266700F3767B /* DetalleAuto2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAuto2.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				789E7E121DF63273003B5E23 /* FBSDKShareKit.framework in Frameworks */,
 				789E7E101DF63273003B5E23 /* FBSDKLoginKit.framework in Frameworks */,
 				789E7E111DF63273003B5E23 /* FBSDKMessengerShareKit.framework in Frameworks */,
+				78B970141E2559A0007715AC /* MapKit.framework in Frameworks */,
 				789E7E0F1DF63273003B5E23 /* FBSDKCoreKit.framework in Frameworks */,
 				1F2F19EDF9A5893CADA37431 /* Pods_AutoUnionAplicacion.framework in Frameworks */,
 			);
@@ -197,7 +202,7 @@
 				78363DE91E005A6E006135B9 /* Models */,
 				78363DEC1E00625F006135B9 /* Controllers */,
 				785B8A031E01D4BF00C5A231 /* video_auto.mp4 */,
-				78276DFD1E02FDF80037EF0D /* Main.storyboard */,
+				787A2F341E246956008F7CE8 /* Main.storyboard */,
 				781782F21DDA1B4000A2570E /* Assets.xcassets */,
 				781782E91DDA1B4000A2570E /* AppDelegate.swift */,
 				781782F41DDA1B4000A2570E /* LaunchScreen.storyboard */,
@@ -257,6 +262,7 @@
 				78FA94F41E03624A004AE8F4 /* SMS.swift */,
 				78E98DB71E20266700F3767B /* DetalleAuto2.swift */,
 				78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */,
+				78E3A15D1E245A45002FA154 /* Mapa.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 		AB236A39B7CFEB56B6955CC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78B970131E2559A0007715AC /* MapKit.framework */,
 				E4396FE363AD65A1E55D77D2 /* Pods_AutoUnionAplicacion.framework */,
 				1726DFE484A5EB4EA52220DD /* Pods_AutoUnionAplicacionTests.framework */,
 				290D29AA62CA6EB15891E2C5 /* Pods_AutoUnionAplicacionUITests.framework */,
@@ -366,6 +373,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 97Y568JHM3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					781782FB1DDA1B4000A2570E = {
 						CreatedOnToolsVersion = 8.1;
@@ -406,7 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78276DFE1E02FDF80037EF0D /* Main.storyboard in Resources */,
+				787A2F351E246956008F7CE8 /* Main.storyboard in Resources */,
 				781782F61DDA1B4000A2570E /* LaunchScreen.storyboard in Resources */,
 				781782F31DDA1B4000A2570E /* Assets.xcassets in Resources */,
 			);
@@ -575,6 +587,7 @@
 				78B7722C1E1569C2008E525F /* AlmacenGerente.swift in Sources */,
 				78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */,
 				78B7722A1E1567B3008E525F /* FilaGerenteAutos.swift in Sources */,
+				78E3A15E1E245A45002FA154 /* Mapa.swift in Sources */,
 				781782EE1DDA1B4000A2570E /* Buscar.swift in Sources */,
 				78F16F6E1E16BEF200502913 /* RegistrarAuto.swift in Sources */,
 				7817831C1DDA48B900A2570E /* DetalleAutomovil.swift in Sources */,

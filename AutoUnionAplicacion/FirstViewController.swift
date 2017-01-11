@@ -11,6 +11,8 @@ import Social
 import FBSDKShareKit
 import Alamofire
 
+
+
 class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     /**::::::::::::: PRUEBA DE DICCIONARIO  :::::::::::::::*/
     var diccionario = [String : String]()
