@@ -7,12 +7,10 @@
 //
 
 import UIKit
+import Foundation
 import MapKit
-import MessageUI
 
-
-
-class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,MKMapViewDelegate,MFMailComposeViewControllerDelegate{
+class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,MKMapViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,27 +92,36 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
        let alertManager = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let actionMarcar = UIAlertAction(title: "Llamada", style: .default, handler: {
             (alert:UIAlertAction)-> Void in
+            
            /*** -------------------
                   LLamada
                 ------------------**/
+            let alerta =  Alertas()
+            alerta.showAlert(controller: self, titulo: "Confirmación", mensaje: "En breve nos pondremos en contacto a traves de una llamada para atenderlo.")
+
             
         })
         actionMarcar.setValue(UIImage(named: "phone"), forKey: "image")
-        actionMarcar.setValue("", forKey: "")
     
         let actionWhatsapp =  UIAlertAction(title: "Whatsapp", style: .default, handler: {
             (alet:UIAlertAction)-> Void in
             /*** -------------------
              Whatsapp
              ------------------**/
+    
+            let alerta =  Alertas()
+            alerta.showAlert(controller: self, titulo: "Confirmación", mensaje: "En breve nos pondremos en contacto a traves de whatsapp para atenderlo.")
         })
         actionWhatsapp.setValue(UIImage(named: "whatsapp"), forKey: "image")
         
         let actionMail =  UIAlertAction(title: "Mail", style: .default, handler: {
             (alet:UIAlertAction)-> Void in
             /*** -------------------
-             Mail
-             ------------------**/
+                     Mail
+                 ------------------**/
+            
+            let alerta =  Alertas()
+            alerta.showAlert(controller: self, titulo: "Confirmación", mensaje: "En breve nos pondremos en contacto a traves de mail para atenderlo.")
         })
        actionMail.setValue(UIImage(named: "message"), forKey: "image")
         let actionCancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
@@ -218,6 +225,41 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         mapa.selectAnnotation(pointAnotattion, animated: true)
         mapa.setRegion(regionMapaVisible, animated: false)
     }
+    /** ---------------------
+     metodo para desaperecer la interfaz de correo despúes de
+     cancelar la operación o enviar correo
+     --------------------- **/
+   /* func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?){
+        controller.dismiss(animated: true, completion: nil)
+    }*/
+    /***_______________________________
+        *METODO PARA ENVIAR MESSAGES*
+         ------------------------------*/
+    /*func enviarMail()  {
+        if MFMailComposeViewController.canSendMail() { //Comprueba si se peuden enviar mensajes
+            
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["isaimoso@icloud.com"])
+            mail.setBccRecipients(["isaimoso@icloud.com"])
+            mail.setCcRecipients(["isaimoso@icloud.com"])
+            mail.setSubject("Consulta App Auto Unión")
+            
+            mail.setMessageBody("Mensaje de prueba en html", isHTML: true)
+            self.present(mail, animated: true, completion: nil)
+            
+        }else{
+           print("No se peuden enviar mensajes")
+            let mensajeAlerta  = Alertas()
+            mensajeAlerta.showAlert(controller: self, titulo: "Inicia sesión", mensaje: "Debes de iniciar sesión en la aplicacion de Mail para comunicarte con las agencia")
+        }
+    }*/
+    
+    
+    
+    
+    
+    
     
     
 }

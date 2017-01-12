@@ -50,8 +50,6 @@ class Mapa: UIViewController,MKMapViewDelegate,UINavigationControllerDelegate{
         
         let latiDelta: CLLocationDegrees = 0.020
         let longDelta:CLLocationDegrees = 0.020
-        
-        
         let span: MKCoordinateSpan = MKCoordinateSpanMake(latiDelta, longDelta)
         let location:  CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitud,longitud)
         
@@ -65,7 +63,7 @@ class Mapa: UIViewController,MKMapViewDelegate,UINavigationControllerDelegate{
         mapaView.addAnnotation(pinPoint)
         mapaView.tintColor  = UIColor.black
         mapaView.mapType = .standard
-       // mapaView.userLocation =  true
+        //mapaView.userLocation =  true
         mapaView.setRegion(region, animated: true)
         
     }
