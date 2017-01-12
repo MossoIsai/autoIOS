@@ -31,6 +31,7 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         fila.imgEmpresa.image = UIImage(named: "bmw_log")!
         fila.labelNombreAgencia.text = "BWM Polanco, Ciudad de México"
         /**ScrollView de viewpager(Lista de autos)*/
+        fila.scrollView.showsHorizontalScrollIndicator = false
         fila.scrollView.frame = CGRect(x:0, y:50, width:self.view.frame.width, height:self.view.frame.height)
 
         let scrollViewWidth: CGFloat = fila.scrollView.frame.width
@@ -75,8 +76,10 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         fila.selectionStyle = .none
         /***Mapas**/
         fila.mapa.delegate = self
+        fila.mapa.addGestureRecognizer(gestoMapa)
+        fila.mapa.isUserInteractionEnabled = true
+    
         fila.btnContactarme.layer.cornerRadius = 5
-        
         fila.descripcion.text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmodtempor incididunt ut labore et dolore magnaaliqua.Utenim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duisaute irure dolor in reprehenderit in voluptate velitessecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt inculpa qui officia deserunt mollit anim idestlaborum."
        fila.descripcion.lineBreakMode = NSLineBreakMode.byWordWrapping
        fila.descripcion.numberOfLines = 20
@@ -254,6 +257,15 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             mensajeAlerta.showAlert(controller: self, titulo: "Inicia sesión", mensaje: "Debes de iniciar sesión en la aplicacion de Mail para comunicarte con las agencia")
         }
     }*/
+    
+    let gestoMapa = UILongPressGestureRecognizer(target: self, action: #selector(DetalleAuto2.enviarMapaCompleto(_sender:)))
+    
+    func enviarMapaCompleto(_sender: UITapGestureRecognizer){
+        print("Enviando a mapa completo TEST")
+    }
+    
+
+
     
     
     

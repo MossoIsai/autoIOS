@@ -16,6 +16,7 @@
     
     var window: UIWindow?
     let theme = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
+    let theme2 =  UIColor(red: 70/255, green: 129/255, blue: 207/255, alpha: 1)
     let themeColorGray =  UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
 
     

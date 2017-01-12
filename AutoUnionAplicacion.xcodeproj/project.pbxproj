@@ -35,6 +35,7 @@
 		78B970141E2559A0007715AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B970131E2559A0007715AC /* MapKit.framework */; };
 		78BD4B1F1E20632D00B0255B /* FilaDetalleAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */; };
 		78C082881E1F0DB1005944B9 /* DetalleAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C082871E1F0DB1005944B9 /* DetalleAgencia.swift */; };
+		78C3BF9A1E2800AF00054868 /* AutoComparador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C3BF991E2800AF00054868 /* AutoComparador.swift */; };
 		78DCDA421E0DF1F80093BBA0 /* Favoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */; };
 		78E3A15E1E245A45002FA154 /* Mapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3A15D1E245A45002FA154 /* Mapa.swift */; };
 		78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */; };
@@ -104,6 +105,7 @@
 		78B970131E2559A0007715AC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaDetalleAuto.swift; sourceTree = "<group>"; };
 		78C082871E1F0DB1005944B9 /* DetalleAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAgencia.swift; sourceTree = "<group>"; };
+		78C3BF991E2800AF00054868 /* AutoComparador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoComparador.swift; sourceTree = "<group>"; };
 		78DCDA411E0DF1F80093BBA0 /* Favoritos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favoritos.swift; sourceTree = "<group>"; };
 		78E3A15D1E245A45002FA154 /* Mapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapa.swift; sourceTree = "<group>"; };
 		78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaAgencia.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				78E98DB71E20266700F3767B /* DetalleAuto2.swift */,
 				78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */,
 				78E3A15D1E245A45002FA154 /* Mapa.swift */,
+				78C3BF991E2800AF00054868 /* AutoComparador.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C3BF9A1E2800AF00054868 /* AutoComparador.swift in Sources */,
 				78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */,
 				78B7722C1E1569C2008E525F /* AlmacenGerente.swift in Sources */,
 				78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */,

@@ -26,11 +26,6 @@ class Mapa: UIViewController,MKMapViewDelegate,UINavigationControllerDelegate{
             mapaView.mapType  = .standard
             break
         }
-        
-        
-        
-        
-        
     }
 
     override func viewDidLoad() {
@@ -54,18 +49,20 @@ class Mapa: UIViewController,MKMapViewDelegate,UINavigationControllerDelegate{
         let location:  CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitud,longitud)
         
         let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-        
+
         let pinPoint = MKPointAnnotation()
         pinPoint.coordinate = location
-        pinPoint.title = "Audi Cuernava"
-        pinPoint.subtitle = "Av Rio Mayo Cuernavaca"
+        pinPoint.title = "Audi Cuernavaca"
+        pinPoint.subtitle = "Av. Rio Mayo No.1334 Col Vista Hermosa"
         pinPoint.accessibilityElementsHidden = false
         mapaView.addAnnotation(pinPoint)
         mapaView.tintColor  = UIColor.black
         mapaView.mapType = .standard
         //mapaView.userLocation =  true
+        mapaView.showsUserLocation = true
+        mapaView.selectAnnotation(pinPoint, animated: true)
         mapaView.setRegion(region, animated: true)
-        
+   
     }
 
     
