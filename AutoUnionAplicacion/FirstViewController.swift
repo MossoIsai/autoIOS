@@ -59,13 +59,13 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         let fila: FilaModelo = tableView.dequeueReusableCell(withIdentifier: "fila") as! FilaModelo
         
         fila.nombreAgencia.text = "Audi Cuernavaca"
-        fila.precio.text = "$ 1, 000, 000 M.N"
+        fila.precio.text = "$ 1, 000, 000 M.N."
         fila.datosAuto.text = nombreAuto[indexPath.row]
         
         let automovil: UIImage =  UIImage(named: imagenesArray[indexPath.row])!
         
         let corazon: UIImage =   UIImage(named: "corazonItem2")!
-        let empresa: UIImage =  UIImage(named: "bmw_log")!
+        let empresa: UIImage =  UIImage(named: "audi_logo")!
         fila.imgAuto.image = automovil
         fila.imgAuto.clipsToBounds = true
         fila.imgAuto.contentMode = .scaleAspectFit
@@ -101,7 +101,6 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
             (alert: UIAlertAction!) -> Void in
             
            let fbContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
-            
             
             
             fbContent.contentURL = NSURL(string: "http://www.audiusedcarcenter.com") as URL!
@@ -203,7 +202,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         //reauest("urlConecction",metodo(.post/.get),paramtetros,codificaciónJSON)
         Alamofire.request(linkAuto, method: .get, parameters: parameters, encoding: JSONEncoding.default)
             .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
-                print("Progress: \(progress.fractionCompleted)")
+             //   print("Progress: \(progress.fractionCompleted)")
             }
             .validate { request, response, data in
                 
@@ -212,13 +211,14 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
             }
             .responseJSON {
                 response in
-                debugPrint(response)
+                //debugPrint(response)
                 if let result = response.result.value {
                     let JSON = result as! NSArray
                     //let JSON2 = result as! NSDictionary
                     var tamano =  JSON.count
                     //print(JSON2)
-                    print("Tamaño\( JSON.value(forKey: "locNombre"))")
+                   print("Tamaño\( JSON.value(forKey: "locNombre"))")
+                
                 }
         }
         //print(":::::::::: SEGUNDA PETICIÓN::::::")

@@ -18,7 +18,6 @@
     let theme = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
     let theme2 =  UIColor(red: 70/255, green: 129/255, blue: 207/255, alpha: 1)
     let themeColorGray =  UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
-
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //Color del texto del background
@@ -40,7 +39,6 @@
         return true
         
     }
-    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -76,6 +74,14 @@
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         //UIApplication.shared.statusBarStyle = .lightContent
+       /* UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        // Sets shadow (line below the bar) to a blank image
+        UINavigationBar.appearance().shadowImage = UIImage()
+        // Sets the translucent background color
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        // Set translucent. (Default value is already true, so this can be removed if desired.)
+        UINavigationBar.appearance().isTranslucent = true*/
+        
         return true
     }
     

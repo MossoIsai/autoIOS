@@ -151,7 +151,7 @@ class DetalleUsuario: UITableViewController,UITextFieldDelegate{
     
     func initViews(){
         //seteando valores de los campos
-        inicioFormulario(name: "ISAI GARCIA MOSO", mail: "isaimoso@icloud.com", phone: "5574260143", whats: "5574260143", user: "isaimoso", fechaNac: "28/Sep/1990")
+        inicioFormulario(name: "Andres Angulo", mail: "andresiño@audi.com", phone: "7771290456", whats: "7771290456", user: "andresiño", fechaNac: "18/Marzo/1985")
         
         //self.tableView.backgroundColor = UIColor.white
         //self.correo.keyboardType = UIKeyboardType.emailAddress

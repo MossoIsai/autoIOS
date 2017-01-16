@@ -38,8 +38,18 @@ class SMS: UIViewController{
             mensajeAlerta.showAlert(controller: self, titulo: "Verificar contraseña", mensaje: "La contraseña de confirmación es diferente.")
         }
         else{
+             let alertController =  UIAlertController(title: "Código de Activación", message: "En breve recibiras un código de activación de 4 digitos por correo electrónico", preferredStyle:.alert)
             
-            mensajeAlerta.showAlert(controller: self, titulo: "Código de Activación", mensaje: "En breve recibiras un código de activación de 4 digitos por correo electrónico.")
+            let actionAceptar = UIAlertAction(title: "Aceptar", style: .default, handler: {
+                (alert:UIAlertAction!) -> Void in
+                self.performSegue(withIdentifier: "backToLogin", sender: nil)
+                
+            });
+            
+            alertController.addAction(actionAceptar)
+            self.present(alertController, animated: true, completion: nil)
+            
+            /*mensajeAlerta.showAlert(controller: self, titulo: "Código de Activación", mensaje: "En breve recibiras un código de activación de 4 digitos por correo electrónico.")*/
         }
         
     }

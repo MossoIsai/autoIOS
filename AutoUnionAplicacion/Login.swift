@@ -25,7 +25,6 @@ class Login: UIViewController {
 @IBAction func btnEnter(_ sender: Any) {
     if(correo.text == "" || contrasena.text == ""){
        /* let alertaManager = UIAlertController(title: "Campos vacios", message: "Usuario y contraseña incorrecta", preferredStyle: .alert)
-        
         let ok = UIAlertAction(title: "Aceptar", style: .default, handler:nil)
         alertaManager.addAction(ok)
         self.present(alertaManager, animated: false, completion: nil)*/
@@ -33,6 +32,10 @@ class Login: UIViewController {
        managerAlert.showAlert(controller: self, titulo: "Campos vacios", mensaje: "Usuario y contraseña incorrecta")
         
         
+    }else if correo.text == "andres@gmail.com"{
+        self.performSegue(withIdentifier: "loginToUser", sender: nil)
+    }else if(correo.text == "luis@gmail.com"){
+        self.performSegue(withIdentifier: "loginToAdmin", sender: nil)
     }
 }
 override func viewDidLoad() {
@@ -49,7 +52,7 @@ override func viewDidLoad() {
     player.play()*/
 }
 func cargarVistas() {
-    self.correo.text = "ing.isaimosso@gmail.com"
+    self.correo.text = "andres@gmail.com"
     self.correo.textAlignment = .center
     self.contrasena.textAlignment = .center
     //Aquí ponemos la contraseña
@@ -58,12 +61,10 @@ func cargarVistas() {
     btnEnter.layer.borderWidth = 1
     btnEnter.layer.backgroundColor = UIColor.clear.cgColor
     btnEnter.layer.cornerRadius = 4*/
-    
     self.btnEnter.backgroundColor =  UIColor(red: 6/255, green: 52/255, blue:112/255, alpha: 1)
     self.btnEnter.layer.cornerRadius = 4
     self.btnEnter.layer.borderWidth = 1
     self.btnEnter.layer.borderColor =  UIColor(red: 6/255, green: 52/255, blue:112/255, alpha: 1).cgColor
-    
     
     self.terminos_condiciones.text = "Al registrarte, aceptas nuestras Condiciones y la Politica de privacidad."
     self.terminos_condiciones.textAlignment = .center
@@ -71,7 +72,6 @@ func cargarVistas() {
     view_down.layer.borderWidth = 0.4
     view_down.layer.backgroundColor = UIColor.clear.cgColor
     view_down.layer.borderColor = UIColor.gray.cgColor
-    
     
     terminos_condiciones.lineBreakMode = NSLineBreakMode.byWordWrapping
     terminos_condiciones.numberOfLines = 2

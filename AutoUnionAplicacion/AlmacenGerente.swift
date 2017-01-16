@@ -10,19 +10,17 @@ import UIKit
 
 class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
-    private var titulo:[String] = ["Audi R8 Multitronic 2017","Hummer  H2 2010","Honda XL20 2016","Audi R8 Stronic 2010","VolksWagen Jetta 2016","Mazda XC 207","Mercedes Benz C200 2017","Audi A3 Multitronic 2016","Audi Q3 Quattro 2015","Audi Q5  Stronic 2017","Audi Q7 Quattro 2017"]
+    private var titulo:[String] = ["Audi R8 Multitronic 2017","Hummer  H2 2010","Honda Accord 2016","Audi R8 Stronic 2010","VolksWagen Jetta 2016","Mazda 3 S Grand Touring 2016","Mercedes Benz C200 2017","Audi A3 Multitronic 2016","Audi Q3 Quattro 2015","Audi Q5  Stronic 2017","Audi Q7 Quattro 2017"]
     private var chasises:[String] = ["","","","","","","","","","","",""]
     private var imagenes:[String] = ["r8","hummer","honda_car","img3","jetta","mazda_car","mercedes","q1_1","q3","q7","q5","ram_car"]
     private var visitas:[String] = ["","","","","","","","","","","",""]
-    private var diasSemaforo:[Int] = [23,90,120,138,4,1,46,83,10,365,72]
+    private var diasSemaforo:[Int] = [450,184,93,80,79,63,59,45,38,10,5]
     private var vendidoStatus:[Int] =  [0,0,1,1,0,0,1,0,1,1,0]
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cargarVistas()
-        
+        initViews()
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,8 +46,8 @@ class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate
         if vendidoStatus[indexPath.row] == 0{
             fila.labelVendido.isHidden = true
         }
-        
-        
+        ///la fila no se puede marcar
+        fila.selectionStyle = .none
         if diasSemaforo[indexPath.row] <= 44 {
             fila.semaforoDias.image = UIImage(named: "circle_green")
         }else if diasSemaforo[indexPath.row] >= 45 && diasSemaforo[indexPath.row] <= 90 {
@@ -61,9 +59,7 @@ class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate
         print(vendidoStatus[indexPath.row])
         
         return fila
-        
     }
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         //
     }
@@ -71,7 +67,7 @@ class AlmacenGerente: UIViewController,UITableViewDataSource,UITableViewDelegate
         
     }
     /**Metodo que carga la vista**/
-    func cargarVistas() {
+    func initViews() {
         let tabArray = self.tabBarController?.tabBar.items as NSArray!
         let tabItem = tabArray?.object(at: 0) as! UITabBarItem
         tabItem.badgeValue = "\(titulo.count)"

@@ -28,8 +28,8 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         
         let fila: FilaDetalleAuto =  tableView.dequeueReusableCell(withIdentifier: "fila") as! FilaDetalleAuto
         
-        fila.imgEmpresa.image = UIImage(named: "bmw_log")!
-        fila.labelNombreAgencia.text = "BWM Polanco, Ciudad de México"
+        fila.imgEmpresa.image = UIImage(named: "audi_logo")!
+        fila.labelNombreAgencia.text = "Audi Cuernavaca"
         /**ScrollView de viewpager(Lista de autos)*/
         fila.scrollView.showsHorizontalScrollIndicator = false
         fila.scrollView.frame = CGRect(x:0, y:50, width:self.view.frame.width, height:self.view.frame.height)
@@ -81,12 +81,20 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     
         fila.btnContactarme.layer.cornerRadius = 5
         fila.descripcion.text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmodtempor incididunt ut labore et dolore magnaaliqua.Utenim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duisaute irure dolor in reprehenderit in voluptate velitessecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt inculpa qui officia deserunt mollit anim idestlaborum."
-       fila.descripcion.lineBreakMode = NSLineBreakMode.byWordWrapping
-       fila.descripcion.numberOfLines = 20
+        fila.descripcion.lineBreakMode = NSLineBreakMode.byWordWrapping
+        fila.descripcion.numberOfLines = 20
+        fila.imgEmpresa.clipsToBounds = true;
+        fila.imgEmpresa.layer.cornerRadius = 18
+        fila.imgEmpresa.layer.borderColor = UIColor.black.cgColor
+        fila.imgEmpresa.layer.borderWidth = 0.3
+        fila.imgEmpresa.layer.shadowOffset = CGSize.zero
+        fila.imgEmpresa.contentMode = .scaleAspectFit
+
         
        marcarPunto(mapa: fila.mapa, titulo: "Audi Cuernavaca", subtitulo: "Av. Rio Mayo No.1334 Col Vista Hermosa", latitud: 18.9343080, longitud: -99.2070589)
         //Sin Separador
         tableView.separatorStyle = .none
+        
         return fila
         
     }
@@ -95,7 +103,6 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
        let alertManager = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let actionMarcar = UIAlertAction(title: "Llamada", style: .default, handler: {
             (alert:UIAlertAction)-> Void in
-            
            /*** -------------------
                   LLamada
                 ------------------**/
@@ -156,9 +163,6 @@ class DetalleAuto2: UIViewController,UITableViewDelegate,UITableViewDataSource,U
              Twitter
              ------------------**/
         })
-        
-        
-        
         actionTwitter.setValue(UIImage(named: "twitter"), forKey: "image")
         let actionURL =  UIAlertAction(title: "Copiar URL", style: .default, handler:{
             (alert: UIAlertAction!) -> Void in

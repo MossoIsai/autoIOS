@@ -41,6 +41,9 @@
 		78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */; };
 		78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E73E8E1DF2171000F1B21F /* Agencia.swift */; };
 		78E98DB81E20266700F3767B /* DetalleAuto2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E98DB71E20266700F3767B /* DetalleAuto2.swift */; };
+		78EAD1411E292FCD00408EF4 /* PhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAD1401E292FCD00408EF4 /* PhotoCollectionCell.swift */; };
+		78EAD1431E29338D00408EF4 /* ProductsGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAD1421E29338D00408EF4 /* ProductsGridFlowLayout.swift */; };
+		78EAD1471E29342900408EF4 /* ProductsListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAD1461E29342900408EF4 /* ProductsListFlowLayout.swift */; };
 		78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ECB73A1DF5CD25008AED57 /* Asistencia.swift */; };
 		78F16F6E1E16BEF200502913 /* RegistrarAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F16F6D1E16BEF100502913 /* RegistrarAuto.swift */; };
 		78FA94F51E03624A004AE8F4 /* SMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA94F41E03624A004AE8F4 /* SMS.swift */; };
@@ -111,6 +114,9 @@
 		78E73E8C1DF213AD00F1B21F /* FilaAgencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilaAgencia.swift; sourceTree = "<group>"; };
 		78E73E8E1DF2171000F1B21F /* Agencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agencia.swift; sourceTree = "<group>"; };
 		78E98DB71E20266700F3767B /* DetalleAuto2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleAuto2.swift; sourceTree = "<group>"; };
+		78EAD1401E292FCD00408EF4 /* PhotoCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCell.swift; sourceTree = "<group>"; };
+		78EAD1421E29338D00408EF4 /* ProductsGridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsGridFlowLayout.swift; sourceTree = "<group>"; };
+		78EAD1461E29342900408EF4 /* ProductsListFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsListFlowLayout.swift; sourceTree = "<group>"; };
 		78ECB73A1DF5CD25008AED57 /* Asistencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asistencia.swift; sourceTree = "<group>"; };
 		78F16F6D1E16BEF100502913 /* RegistrarAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrarAuto.swift; sourceTree = "<group>"; };
 		78FA94F41E03624A004AE8F4 /* SMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMS.swift; sourceTree = "<group>"; };
@@ -266,6 +272,9 @@
 				78BD4B1E1E20632D00B0255B /* FilaDetalleAuto.swift */,
 				78E3A15D1E245A45002FA154 /* Mapa.swift */,
 				78C3BF991E2800AF00054868 /* AutoComparador.swift */,
+				78EAD1401E292FCD00408EF4 /* PhotoCollectionCell.swift */,
+				78EAD1421E29338D00408EF4 /* ProductsGridFlowLayout.swift */,
+				78EAD1461E29342900408EF4 /* ProductsListFlowLayout.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -589,6 +598,7 @@
 				78C3BF9A1E2800AF00054868 /* AutoComparador.swift in Sources */,
 				78E73E8F1DF2171000F1B21F /* Agencia.swift in Sources */,
 				78B7722C1E1569C2008E525F /* AlmacenGerente.swift in Sources */,
+				78EAD1411E292FCD00408EF4 /* PhotoCollectionCell.swift in Sources */,
 				78ECB73B1DF5CD25008AED57 /* Asistencia.swift in Sources */,
 				78B7722A1E1567B3008E525F /* FilaGerenteAutos.swift in Sources */,
 				78E3A15E1E245A45002FA154 /* Mapa.swift in Sources */,
@@ -600,10 +610,12 @@
 				781782EC1DDA1B4000A2570E /* FirstViewController.swift in Sources */,
 				78FA94F51E03624A004AE8F4 /* SMS.swift in Sources */,
 				78B5CF3C1DFF644E00FF4C6F /* Automovil.swift in Sources */,
+				78EAD1471E29342900408EF4 /* ProductsListFlowLayout.swift in Sources */,
 				78C082881E1F0DB1005944B9 /* DetalleAgencia.swift in Sources */,
 				78DCDA421E0DF1F80093BBA0 /* Favoritos.swift in Sources */,
 				78276E001E0320D40037EF0D /* Login.swift in Sources */,
 				78E73E8D1DF213AD00F1B21F /* FilaAgencia.swift in Sources */,
+				78EAD1431E29338D00408EF4 /* ProductsGridFlowLayout.swift in Sources */,
 				78BD4B1F1E20632D00B0255B /* FilaDetalleAuto.swift in Sources */,
 				78E98DB81E20266700F3767B /* DetalleAuto2.swift in Sources */,
 				78FB88B51E01A4AD00D40FA9 /* Registro.swift in Sources */,
